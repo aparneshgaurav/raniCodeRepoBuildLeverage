@@ -48,3 +48,57 @@ ________________________________________________________________________________
     nidhu talk 
       
  ______________________________________________________________________________________________________________________________________
+27th april
++	
++	code building
++		thb ( fvc )
++
++			Improve website , basic robustness first before lame expansion , expand with robustness intact ( free version ) 
+				no more updates to prod without dev work and testing
+				upload yesterday version of thb prod , evening and test the latency improvement and decreased length of ad banner
+				build from eclipse dev project 
+					last considered git prod update would be of today 27th
+					have plz wait symbol at page start
+					move image lil lower than thinker tag	
+					have good image instead of iframe 
+					upload mapreduce work
+					do git checkin - both dev and prod
+					do task tracker checkin
++				complete amz integration with proper ads
+					have ads with two to three categories , one graphic , other text ads . ( have graphics and text ads , mob-ftwr )
+				complete propeller advertisement integration , leave if it's buggy ( already taken up with them ) 
+				have proper font on read mode as well
+				first capitalize on inr earning
+				commit code and task-tracker
++				have tutorials categories : java , hadoop , ml , restful , mysql , dsAlgo ( exempt jquery )
++			registering company
+				read about docs required
+				make folder for thb
+				put that website under that link
++			
++			tutorials ( my company colleagues like nh,ssh and newbies from college like shv may learn ) 
++				java
++				hdfs mapreduce
++				spark machine learning
++				maven
++				git
++				sql
++				spring
++				restful webservices
++				ds-algo
+				chat/like with queue
++				
++
++		funds
++			work bit more on both algos today so that you may put on CodeCool
++	
++	fitness building
++		
++		evening sports
++			endurance walk/jog
++			1 set pushup
++	
++	general
++		
++		code
++      
