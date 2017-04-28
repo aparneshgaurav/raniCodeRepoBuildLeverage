@@ -102,3 +102,68 @@ ________________________________________________________________________________
 +		
 +		code
 +      
+________________________________________________________________________________________________________________________________________________
+28th april
++	
++	code build-fast
++		thb ( fast & fvc )
++
++			Improve website , basic robustness first before lame expansion , expand with robustness intact ( free version ) 
+				build from eclipse dev project ( after reading last git checkin from prod and dev ) 
+					make in sync the default image with on prod	
+						change : from "data" till before "success"
+					have plz wait symbol at page start
+						change at 881 and 421 , added profilePic show and hide
+					remove advertisements
+						removed under advertsiment display
+					have controllers in ad dispaly tag and increase create mode zone 
+						first replicate it under advertisement panel
+						then increase the height of that panel
+						will take it up after some funding related work
+						change : copy paste advertisement panel and remove controller input panel
+						change : increase writePanel top percentage value 
+					send to yourself local machine h2 data schema 
+						do it now 
+					have one text ad display
+						copy one text advertisement from hackpad , ignore it for time being 
+					do deployment of prod
+					do git checkin - both dev and prod
+					do task tracker checkin
++				complete amz integration with proper ads
+					have ads with two to three categories , one graphic , other text ads . ( have graphics and text ads , mob-ftwr )
+				complete propeller advertisement integration , leave if it's buggy ( already taken up with them ) 
+				have proper font on read mode as well
+				first capitalize on inr earning
+				commit code and task-tracker
++				have tutorials categories : java , hadoop , ml , restful , mysql , dsAlgo ( exempt jquery )
++			registering company
+				read about docs required
+				make folder for thb
+				put that website under that link
++			
++			tutorials ( my company colleagues like nh,ssh and newbies from college like shv may learn ) 
++				java
++				hdfs mapreduce
++				spark machine learning
++				maven
++				git
++				sql
++				spring
++				restful webservices
++				ds-algo
+				chat/like with queue
++				
++
++		funds
++			read on ml algorithms for weights 
++	
++	fitness building
++		
++		evening sports
++			endurance walk/jog
++			1 set pushup
++	
++	general
++		
++		code
++      
