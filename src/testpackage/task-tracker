@@ -184,6 +184,11 @@ codeMakeFast
 		search tab
 		do single user chrome plugin and installation from local machine 
 		have amazon selling codes installed in product at various stages
+		// code change to make unique username while registration 
+			alter table login  alter column username varchar(255) not null; 
+			alter table login add primary key (username) ( this is working and copied )
+		// code for tabs
+		https://www.w3schools.com/howto/howto_js_tabs.asp
 	
 	funding
 		collate offline model creation work at one place and on cloud
