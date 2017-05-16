@@ -281,5 +281,88 @@ fitness food
 fitness exercise
 	evening walk
 	weight training
+	
+	
+	________________ 16th may _______________________
+	
+	
+	codeMakeFast
+	take code from git dev of today morning from home push and build from eclipse
+		match it with git push statement
+	thinkers implementation validation
+		not exact user found for incorrect hit button
+		have to change the names from the ui file
+	books implementation validation
+	check the logged out user functionality for thinkers
+	check the logeged out user functionality for books
+	remove the names of thinkers which are hard coded
+	remove the names of books which are hard coded
+
+	funding
+		rerun those als codes 
+		read the codes sent by lead
+		
+
+fitness
+	wc me
+	g - g mh lbw
+
+strategyMakeFast
+	try to pay bhaiya's bills
+	speak to neha for coming late / pg
+	update to task-tracker
+	update weight on tt from tomorrow
+	
+	
+	
+	
+	
+	
+	 $("#searchThinkers").keypress(function(e) {
+                 // $("#newCategoryInputId").val("");
+                  if(e.which == 13) {
+                   var keyInput = $("#searchThinkers").val();
+                   // alert("keyinput"+ keyInput);
+                   /*document.getElementById("fullScreenDivForThinkers").click();
+                   $("#contentOfThinkersTab").data="http://localhost:8080/portal/library/"+keyInput;*/
+                   // $("#fullScreenDivForThinkers").load("http://localhost:8080/portal/library/"+keyInput);
+                   var newUrl =  "http://localhost:8080/portal/library/"+keyInput;
+
+                   // alert("tags are : "+availableTags);
+
+                   // var userNames = availableTags.split(",");
+                     var userMatch = "true";
+                   for(var i=0;i<availableTags.length;i++){
+                    // alert(availableTags[i]);
+                    if((availableTags[i]==keyInput)){
+                      // userMatch="false";
+                      // alert("match for name");
+                      break;
+                    }
+                    else{
+                      userMatch="false";
+                    }
+                   }
+
+                   if(userMatch=="false"){
+                    alert("no such user found ");
+                    // userMatch="true";
+                   }
+                   else {
+                   // document.getElementById("contentOfThinkersTab").object.location.href = "http://localhost:8080/portal/library/"+keyInput;
+                 var objectEl = document.getElementById('contentOfThinkersTab');
+                 objectEl.outerHTML = objectEl.outerHTML.replace(/data="(.+?)"/, 'data="' + newUrl + '"');
+                   }
+
+                }
+              /*if(keyInput.length > 12 ){
+                alert("We request you to have category less than 12 characters");
+                 $("#newCategoryInputId").val("");
+              }*/
+            });
+	    
+	    
+	    
+	    
 
 
