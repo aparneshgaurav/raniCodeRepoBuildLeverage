@@ -392,7 +392,68 @@ fightTheRight
 	hint : howHardCanTakeHitNoPainAndKeepMaking
 		
 
+_______________________________________________________ 2nd june ______________________________________________________________________________	    
 	    
-	    
+doTheRightMakeInComposure
+codeMake / intenseRespect ( cnts - mk ) 
+	thb
+		do github commit
+			take backup from workspace , take it in folder
+		build and deploy on local tomcat from eclipse
+			take tomcat backup of existing
+		do books search
+			replicate entire thinkers html code for books search 
+			replciate entire thinkers jquery code for books search
+			have paid books radio buttion ( which if cicked makes screen unclickable ) 
+		have tabs for guests	
+			handle the non-editable feature for guest after tab has come in action
+			auto suggestion not working for guest
+			full screen not working for tabs in guest mode
+		add payment handling for books
+		reduce size of image for fast loading
+		think of algo for unlocking books after receiving payment confirmation email
+		textarea to div
+			includes making it uneditable for guests
 
+
+		do the payment
+		client : please unlock the book , payment transaction got successfully completed . 
+		server : after listening to client request , checks mail for payment done : 
+				if yes , it unlocks that book for that user , handle topics view also
+				if no  , it tells them to reach out to contact team for refund or retry
+		have books under same category
+		have multiple pictures in topic ( one pic uplaod at a time ) 
+		rename topic to chapter only on ui
+		have stable search for thinkers and books , test on mobile also
+		have paypal gateway also
+		have topic wise url also , don't ignore at all the free version 
+		have topics count properly adjusted , preface , contents , thanks and contact 
+		password reset
+		robustness ( includes naming everywhere ) 
+		api security , anibot ( later release )
+		have topic wise dynamic url as well , it's a boost to seo
+		
+				
+		bookListProd
+			core-java , jquery , restful webservices , mysql , java-ml , aws		
+	 			
+bodyMake
+	two chapati/rice meal twice
+	water/milk
+	fatBurner - lemon/coffee
+
+general
+	loan payment
+	aws payment
+	shiv marketing
+	amazon purchase 
+
+routimeMake
+	teaInWhiteCup
+	morningBrushBathePooja
+	ShoesAndPerfume
+
+lessonsMake
+	in case stuck in making code , do atomic poc
+	
 
