@@ -456,4 +456,82 @@ routimeMake
 lessonsMake
 	in case stuck in making code , do atomic poc
 	
+	_________________________________________ 3rd june _______________________________
+	
+		doTheRightMakeInComposure
+codeMake / intenseRespect ( cnts - mk ) 
+	thb
+		fix thinker tabs functioning
+			books coming irregularly on categories selection 
+				fix done on both
+				check the fix again on 
+			add correctness for full view in tabs
+				done for thinkers
+				replicate the fix for books
+			add non editable feature for thinkers tab
+			add non editable feature for books tab
+			add thinkers not found feature
+			add books not found
+			add image string for default image loading 
+			myLibraryTab goes missing after few loads in other tabs
+
+
+		fix guest tabs functioning
+		payment button handling after demo jquery function call
+		reduce size of image for fast loading
+		think of algo for unlocking books after receiving payment confirmation email
+		textarea to div
+			includes making it uneditable for guests
+		do the payment
+		client : please unlock the book , payment transaction got successfully completed . 
+		server : after listening to client request , checks mail for payment done : 
+				if yes , it unlocks that book for that user , handle topics view also
+				if no  , it tells them to reach out to contact team for refund or retry
+		have books under same category
+		have multiple pictures in topic ( one pic uplaod at a time ) 
+		rename topic to chapter only on ui
+		have stable search for thinkers and books , test on mobile also
+		password reset
+		remove phone number 
+		bookListProd
+			core-java , jquery , restful webservices , mysql , java-ml , aws
+
+
+		LATER : 
+		have paypal gateway also
+		have topic wise url also , don't ignore at all the free version 
+		have topics count properly adjusted , preface , contents , thanks and contact 
+		password reset
+		robustness ( includes naming everywhere ) 
+		api security , anibot ( later release )
+		have topic wise dynamic url as well , it's a boost to seo
+		
+				
+				
+	 			
+bodyMake
+	( 1 roti milk , one dal/sbz roti) twice
+	water/milk
+	fatBurner - lemon/coffee
+	honeyGarlicGingerMethi
+	6 set legups , 6 set armsUp
+	
+	optional : beetroot 
+	eveningWalkGreen - opt 20 mins
+
+general
+	loan payment
+	aws payment
+	shiv marketing
+		mail tasks to shiv and confirm things on mail / chat
+	amazon purchase 
+
+routineDisciplineMake
+	teaInWhiteCup
+	morningBrushBathePooja
+	ShoesAndPerfume
+
+lessonsMake
+	in case stuck in making code , do atomic poc
+	
 
