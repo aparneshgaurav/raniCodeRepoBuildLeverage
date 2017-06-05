@@ -1,0 +1,25 @@
+json : [value: string]
+hello
+(671, 2396) --> prediction=4.0
+hello
+(670, 1) --> prediction=4.0
+hello
+(671, 590) --> prediction=4.0
+hello
+(670, 318) --> prediction=5.0
+hello
+(669, 2959) --> prediction=5.0
+hello
+(670, 50) --> prediction=5.0
+hello
+(671, 1923) --> prediction=4.0
+hello
+(671, 2291) --> prediction=5.0
+hello
+(670, 457) --> prediction=4.0
+hello
+(668, 608) --> prediction=5.0
+hello
+(671, 260) --> prediction=5.0
+Root-mean-square error = 4.733601770366344
+
