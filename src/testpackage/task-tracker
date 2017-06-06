@@ -612,4 +612,112 @@ general
 		prod-git commit
 	
 	
+	________________________________ 6th june _________________________________________
+	
+								doTheRightMakeInComposure
+
+codeMakeInComposure ( cnts - km ) 
+	thb
+		take the build from git dev of 4th june and see if it builds like what the commit says , check it for that
+			bugs found
+				for non edit for thinker , the write screen gets disabled after returning from other tabs
+				for guest , the myLibrary screen's book name and topic name still appears editable
+		to do list
+			fix bugs
+			implement autocomplete for guest
+			implement user not found
+			implement books not found
+		implement user not found 
+		make one dev-prod change doc 
+		do prod deployment using dev-prod doc 
+		make one to do list for thb
+			after today's prod deployment , start on self-books for amx topics prep
+			make one dev-prod change doc
+			fix browser compatibility issue
+			books under common categories
+			payment gateway integratino indian
+			password reset option 
+			payment gateway integation foreign
+			topic based dynamic urls ( after above all is done ) , after this i can contact someone for seo 
+	funds
+		java-ml <<--
+			re-run als with dataset
+			login to vm
+			re-run code 
+			get bug 
+			fix bug / search for bugFix
+		take the codes from ghanshyam
+		do basic research from your end 
+		see hint from his codes 
+		interview prep : 
+			hive , restful , core java , mapreduce , ds-algo
+			goodToHave : spark
+	workOrder
+		thb phase 1 
+
+		fix bugs
+			for non edit for thinker , the write screen gets disabled after returning from other tabs
+			for guest , the myLibrary screen's book name and topic name still appears editable
+		implement autocomplete for guest
+			have the script which is at the end inside the guest code part
+			replicate the thinkers scenario for books search in case of guest as well <<--
+
+		implement user not found for guest
+		implement book not found for guest
+		for thinker , make search section inputs disabled instead of readonly 
+			for thinkers search
+			for books search
+		java-ml
+			run one vs all code by preparing dataset , progress in this direction
+		funds amx interview prep
+			hive,ds-algo-theory-and-five-examples
+			java,mapreduce,restful
+			start collating all working and understood codes at one place
+		
+		start security training
+		
+		thb phase 2
+			
+				
+
+bodyMakeInComposure
+	milk/water
+	forty minutes tread mill walk 
+
+general
+	take train tickets
+	speak to bhaiya for elec-bills
+	do amz shopping tonight
+		kl-oil
+		gym exerciser
+		lactoTan
+	mail them for airtel bill , why that's high
+	check online for converting sim to prepaid
+
+
+	amx strategy
+	
+		hackpad-dev ( thb replaced with tech-poc )
+			changeOne description : 
+				changeOne workPiecePlaceOneDescription : 
+				changeOne workPiecePlaceOne:
+			
+				changeOne workPiecePlaceTwoDescription : 
+				changeOne workPiecePlaceTwo:
+
+			changeTwo description : 
+				changeTwo workPiecePlaceOneDescription : 
+				changeTwo workPiecePlaceOne:
+			
+				changeTwo workPiecePlaceTwoDescription : 
+				changeTwo workPiecePlaceTwo:
+		dev-merge atHome
+			dev-merge atHome eclipse
+			test dev-merge at tomcat
+		dev-git commit
+		dev-prod doc enabled prod deployment
+		prod-git commit
+	
+	
+	
 	
