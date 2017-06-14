@@ -819,7 +819,43 @@ general
 		dev-prod doc enabled prod deployment
 		prod-git commit
 	
-	
+	______________________________________ 14th june _________________________
+	thb
+		check build from git and eclipse considering last checkin
+			check for features like basic features
+			check for full length display unit for thinker/guest/create/read/quick/full views
+			do delete check for format displays
+				check on ie also
+
+		work on the issue to fix formatted rendering
+			make it work for create mode , quick view 
+			make it work for all else 
+		
+		payment gateway
+			insert/update book price
+			let book be free for default first page
+			prepare hardcoded wire frame so that later can be coded at home 
+				home dependencies
+					
+			for topic wise subsequent read , check if the book table has that reader registered in paidThinkers list
+				if yes , let him read 
+				if no , prompt him for payment with that gateway button and link
+				
+
+
+		build payment gateway
+			have price input with default value zero and one price update button adjacent to the enter topic name zone
+			on update price button click , it should update the table bookPaymentDetails table
+			while doing book search and subsequent read  : 
+			let them have free read of topic one 
+			once payment is initiated , and as a successful transaction , after the price is confirmed from email from gateway , only then the username-
+			-is added to the paidThinkers list of the bookPaymentDetails table.
+			if paid , add the thinker to the paidThinkers list in the table bookPaymentDetails
+			on second topic , only actual text should be displayed if the thinker is in the paidThinkers list , else it displays text to 'pay to read'
+			on second topic , if we find that the thinker is in the paidList of the table for the corresponding book , in that case let the content of-
+			-the second topic be displayed .
+			
+			
 	
 	
 	
