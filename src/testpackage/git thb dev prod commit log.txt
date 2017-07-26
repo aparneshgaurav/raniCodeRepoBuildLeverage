@@ -1,0 +1,17 @@
+______________________
+git dev 27th july 
+
+removed the comments of payment
+		added the comments for the atomic codes of payment that have been removed 
+		fixed codes where search of books was working only for first topic after instant book search 
+			made this work multi topic
+		fixed the same above for opposite log in/out scenario
+
+while committing simply pasted webapp ui files into eclipse , took eclipse src code and pushed
+it's wrong 
+as next task it's important to take back of tomcat existing webapp
+build again from eclipse and check in tomcat for same functionalities
+also from next time atleast the changes should be in git diff command line for git log .
+
+______________________
+
