@@ -15,3 +15,12 @@ also from next time atleast the changes should be in git diff command line for g
 
 ______________________
 
+______________________
+git dev 31st july 
+
+handled code for readable mobile rendering on first tab
+	named some labels in higher font size and weight
+	also handled higher weight and size for mobile view of dropdown element ( topic number )
+
+______________________
+
