@@ -24,3 +24,14 @@ handled code for readable mobile rendering on first tab
 
 ______________________
 
+______________________
+git dev 5th August
+
+mobile view first tab
+	removed profile pic
+	restructured
+	post feature
+
+______________________
+
+
