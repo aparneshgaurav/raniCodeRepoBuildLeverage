@@ -1,0 +1,23 @@
+msDesign : 
+
+
+Have a registration page for both teacher and student which only asks for display name , email id and password 
+while logging in , they should be asked for their town/city and state and subjects they want to choose from dropdown
+	major selected towns and cities ( 4 to 5 max from every state , that too of education centred state )
+	select those states and city yourself , it's easy task 
+	like Haryana - gurgaon , chandigarh , panipat .. tht's it 
+	inputs asked while logging in should have skip button for those who are in hurry or in search of some speacial teacher / student they already know 
+Then both of them should have edit profile section where they can fill up all their data
+	data 
+		image
+		degrees in details ( only for view purpose , not matching purpose ) 
+		subjects / interests ( for matching purpose ) 
+		courses they are offering as part of their tution agenda ( teachers ) and tution wish list ( students ) 
+		fees and time strucutre from teachers 
+		venue from teachers
+		payment to be done after first demo class by teacher , student needs to do 50 % advance payment 
+matching
+	programatically close students and teachers should be initially suggested to them on the basis of their geographies and subjects while logging in and after editing their profiles 
+		if some one hasn't entered any data , suggest them trending teachers and students
+
+ 

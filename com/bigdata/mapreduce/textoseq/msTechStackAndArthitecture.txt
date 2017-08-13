@@ -1,0 +1,24 @@
+msTechStackAndArthitecture
+
+
+follow complete arthitecture of thb
+	it's scalable vertically and horizontally 
+	supports concurrent hits scaling with dynamic tomcat load balancing on aws
+	supports rds sacling with aws rdbms
+	supports multi device access - browser , ipad , any phone through spring restful webservices
+	supports uniform view across devices 
+	check screens that you make with mobile view on chrome browser dev tool kit 
+	it's no issue even if it sometime looks like thb till it serves the purpose
+
+aws
+	learnt it and do it 
+		your setup is right what you had done 
+	set up db as well 
+
+hygiene
+	maven
+	git 
+	jenkins ( jenkins will do in sometime ) 
+
+advertisement
+	digital advertisement
