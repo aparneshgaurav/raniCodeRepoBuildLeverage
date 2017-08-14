@@ -21,3 +21,19 @@ matching
 		if some one hasn't entered any data , suggest them trending teachers and students
 
  
+
+
+Edited by neha
+Design that has been already done
+
+1. registration page --ready
+2. locality dropdown with suggestions ( town/city and state ) --ready 
+3.
+
+
+To be done :-
+1. subjects lists :- open
+2. skip button  :- not done( ll do it by EOD)
+3.edit profile section  :- not done 
+4. matching on the basis of geograpics & subjects :- not done (ll take up after locality)
+5. if some one hasn't entered any data , suggest them trending teachers and students :- not done
