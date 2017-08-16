@@ -19,3 +19,52 @@ To be done :-
 **
 Aparnesh : I suggest to make traskTracker on date basis .. I feel update this page with roadmap and sprint status .
 
+***********************************************************************************************************************
+
+
+Tasks Done till date 16th Aug Eve:-
+1. 1. registration page --ready
+2. locality dropdown with suggestions ( town/city and state ) --ready 
+3. subjects lists :- done
+4. skip button  issue resolved :-(functionality is not ready as i m working on one mejor issue 
+             in which user's home page gets loaded everytime after locality selection .
+             It looks like event or event.preventDefault is not working properly.)
+
+
+Roadmap from 16th Aug to 15 Sep  :-
+
+
+1. 16th to 18th Aug Tasks to be done :-
+
+          1. Rewriting query to match geograpy subjects & opposite profession .( matching on the basis of geograpics & subjects.)
+          2. Skip button functionality handling.
+          3. Chagnes in functionality which appears only one time if users login very first time.
+          4. Editing in Registration page to populate radio button with images instead of list.
+
+
+
+
+2. Sprint 1:-(Meeting Required to understand concept of trending teachers & Students.)
+    from 19th Aug to 26thAug
+
+            5. if some one hasn't entered any data , suggest them trending teachers and students.
+            6. Profile Pic upload functionality
+
+
+
+Sprint 2,3 & 4:-
+From 26th Aug to 15th Sep :- will categories sprint 2,3 & 4 around 26th Aug.(Meeting required before this sprint)
+           
+           
+           7.edit profile section  
+            data 
+
+                degrees in details ( only for view purpose , not matching purpose ) 
+                subjects / interests ( for matching purpose ) 
+                courses they are offering as part of their tution agenda ( teachers ) and tution wish list ( students ) 
+                fees and time strucutre from teachers 
+                venue from teachers
+                payment to be done after first demo class by teacher , student needs to do 50 % advance payment 
+
+
+
