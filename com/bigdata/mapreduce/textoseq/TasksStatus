@@ -1,0 +1,18 @@
+
+
+Edited by neha
+Design that has been already done
+
+1. registration page --ready
+2. locality dropdown with suggestions ( town/city and state ) --ready 
+3. subjects lists :- done
+
+To be done :-
+4. skip button  :-functionality is not ready as i m working on one mejor issue 
+             in which user's home page gets loaded everytime after locality selection .
+             It looks like event or event.preventDefault is not working properly.
+
+5. matching on the basis of geograpics & subjects :- not done (ll take up after point 4)
+6.edit profile section  :- not done 
+7. if some one hasn't entered any data , suggest them trending teachers and students :- not done
+
