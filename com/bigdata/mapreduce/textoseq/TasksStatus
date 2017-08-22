@@ -74,9 +74,26 @@ From 26th Aug to 15th Sep :- will categories sprint 2,3 & 4 around 26th Aug.(Mee
  and apart from that work as if like previous boss from your company is sitting by your side . If you are so passionate aobut startup , 
  work more at this office even after designated office hours .
  
- 
- 
+ I am starting my routinue in away that i could follow your advice.Yes thats true if we can do work in other companies around 9-12 hours 
+ then we should also try to work more harder in our startup.From today onwards i m going to work in startup mode.
+ **********************************************************************************************************
+ Tasks Updates
  
 
+1. 16th to 18th Aug Tasks to be done :-
+
+          1. Rewriting query to match geograpy subjects & opposite profession .( matching on the basis of geograpics & subjects.)   --open 
+          2. Skip button functionality handling.   --done( but later removed as this functionality was dividing the code into multiple direction.)
+          3. Chagnes in functionality which appears only one time if users login very first time.
+          4. Editing in Registration page to populate radio button with images instead of list.
+
+
+
+
+2. Sprint 1:-
+    from 19th Aug to 26thAug
+
+            5. if some one hasn't entered any data , suggest them trending teachers and students. --removed (as skip option is no more required in ms.)
+            6. Profile Pic upload functionality  -not started
 
 
