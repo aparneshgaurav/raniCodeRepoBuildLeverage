@@ -97,3 +97,21 @@ From 26th Aug to 15th Sep :- will categories sprint 2,3 & 4 around 26th Aug.(Mee
             6. Profile Pic upload functionality  -not started
 
 
+*******************************************************************************************************
+Date:-27th Aug
+
+   1. 16th to 18th Aug Tasks status:-
+          1. Rewriting query to match geograpy subjects & opposite profession .( matching on the basis of geograpics & subjects.)   --don 
+          2. Chagnes in functionality which appears only one time if users login very first time.--done
+          3. Editing in Registration page to populate radio button with images instead of list.  --not started.
+          
+          
+2. Sprint1's status:-
+        6. Profile Pic upload functionality  -not started  
+   
+ 3. Sprint2 Tasks to be done:-
+       1. Removing bugs & complications in platform after integrating onetime login functionality.--open
+       2. Making Software uniform in terms of DB tables -- open
+       3. will complete not started tasks in the previous sprints .
+ ******************************************************************************************************************  
+
