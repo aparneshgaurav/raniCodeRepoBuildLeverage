@@ -11,12 +11,14 @@
                  <!-- div for tabs controller -->
                  <div id="zones" class="tab ui-widget"  style="top:0;bottom:96%;left:0;right:0;width: 98%;height: 3.5%; position: absolute; background-color: black;border-style:none;">
                   <button id="defaultOpen" class="tablinks" onclick="openCity(event, 'fullScreenDivForMyHome')"> <span> <font id="tabOne" color="white"> MyLibrary</font></span> </button>
-                   <button class="tablinks" onclick="openCity(event, 'fullScreenDivForThinkers')"><span> <font  id="tabTwo" color="white"> Thinkers</font></span> </button>
+                   <button id="buttonForThinkersId" class="tablinks" onclick="openCity(event, 'fullScreenDivForThinkers')"><span> <font  id="tabTwo" color="white"> Thinkers</font></span> </button>
                   <button class="tablinks" onclick="openCity(event, 'fullScreenDivForBooks')"><span> <font  id="tabThree" color="white"> Books</font></span> </button>
+                  <button class="tablinks" onclick="openCity(event, 'fullScreenDivForTrending')"><span> <font  id="tabFour" color="white">Trending</font></span> </button>
                   <input id = "searchThinkers" style="position: absolute; left: 50%;top:1px;background-color: orange;color:white;font-family:cursive; ;border-style: solid;border-color:orange;" value=" Search thinkers ..." ></input>
-                   <input id = "searchBooks" style="position: absolute; left: 50%;top:1px;background-color: orange;color:white;font-family:cursive ;border-style: solid;border-color:orange;" value=" Search books ..." ></input> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <span id="waitSymbol"  style="font-family: cursive;display: none" >   <font size="3" color="yellow" font-family=" cursive" >Please wait ....   </font></span>
-                                          <span  id="registerPlaceHolder"  style="font-family: cursive" >   <font size="3" color="white" font-family=" cursive" ><a style="color:white"; href="http://localhost:8080/portal"> Register </a></font></span>
-                                         <span  id="logoutPlaceHolder"  style="font-family: cursive" >   <font id="logoutFont" size="3" color="white" font-family=" " ><a style="color:orange"; href="http://localhost:8080/portal"> logout </a></font></span>
+                   <input id = "searchBooks" style="position: absolute; left: 50%;top:1px;background-color: orange;color:white;font-family:cursive ;border-style: solid;border-color:orange;" value=" Search books ..." ></input> <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp --> 
+                   <span id="waitSymbol"  style="position: absolute; right: 2%;top:1px;font-family: cursive" >    <font size="3" color="yellow" font-family=" cursive" >Please wait ....   </font></span>
+                   <span  id="registerPlaceHolder" style="position: absolute; right: 2%;top:1px;font-family: cursive" >   <font size="3" color="white" font-family=" cursive" ><a style="color:orange"; href="http://localhost:8080/portal"> Register </a></font></span>
+                   <span  id="logoutPlaceHolder"  style="position: absolute; right: 2%;top:1px;font-family: cursive" >   <font id="logoutFont" size="3" color="white" font-family=" " ><a style="color:orange"; href="http://localhost:8080/portal"> logout </a></font></span>
                 </div>
 
                  <!-- catch :  zones div bottom and height is 100% , similarly for my home , top and height is 100% -->
@@ -38,7 +40,7 @@
                                 <span >
                               
                                 
-                                <font id="welcomeText"  color="white"><strong>    welcome : </strong></font> 
+                               <!--  <font id="welcomeText"  color="white"><strong>    welcome : </strong></font>  -->
                                         
                                 
                                 </span>
@@ -46,12 +48,12 @@
                                 </div>
                                 <div id="imagePanel"
                         style="top: 11%; left: 14%; right: 16%; bottom: 68.5%; position: absolute; background-color: black;border-style:outset;border: 4px solid black;">
-                               <!--  <image id="profilePic" width="130" height="130" style="border-radius:5px" /> -->
+                             <image id="profilePic" width="130" height="130" style="border-radius:5px" /> 
                             </div>
                             
                             <div id="adPanel"
                         style="top: 45%; left: 14%; right: 16%; bottom: 15%; overflow-y :auto;position: absolute; background-color: black;border-style:outset;border: 4px solid black;">
-                               
+                                 
                                                 <!-- <br>
                                                 <br>
                                                 <label id="testLabelForResponsive" style="color:white;font-style: helvetica;">  Categories : </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
@@ -92,7 +94,7 @@
                         style="top: .01%; left: 21%; right: .01%; bottom: .01%; position: absolute; background-color:black;border-style:none">
                               
                                       <div id="libraryControllerLoginPanel"
-                        style="top: .01%; left: 1%; right: .5%; bottom: 91%; position: absolute; background-color: black;border-style:none ; border-radius: 25px; overflow-y :auto;text-align: center;">
+                        style="top: 1%; left: 1%; right: .5%; bottom: 88%; position: absolute; background-color: black;border-style:none ; border-radius: 25px; overflow-y :auto;text-align: center;"> <!-- imortant divDivision code where top and bottom percentage both have to be considered  -->
                                                <!--  <image id="profilePic" width="50" height="50" style="border-radius:5px" /> -->
                                                
                                                 <label id="testLabelForResponsive" style="color:white;font-style: helvetica;">  Categories : </label>
@@ -125,12 +127,12 @@
 
 
                                 <div id="libraryBookWriteZonePanel"
-                        style="top: 10%; left: 1%; right: .5%; bottom: 1%; position: absolute; background-color: #FFFFFF;border-style:none ; border-radius: 25px; overflow-y :auto;">
+                        style="top: 11%; left: 1%; right: .5%; bottom: .5%; position: absolute; background-color: #FFFFFF;border-style:none ; border-radius: 25px; overflow-y :auto;">
 
 
-                                        <div id="upperDiv" style="left:35%;right:23%;top:1%;bottom:91%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
+                                        <div id="upperDiv" style="left:39%;right:23%;top:1%;bottom:91%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
                                                 <br>
-                                                <input id="newBookId" size="16" value=" Book title .. " style="border-radius:5px;border-style: solid;border-color: orange;border-width: thick;"></input> &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp&nbsp<!-- <label id="labelForTopicName"> TOPIC NAME : </label> --> <input size="11" id="newTopicInputId" style="border-radius:5px;border-style: solid;border-color: orange;border-width: thick;" value="Topic Name .." class="reClear2"></input>
+                                                <input id="newBookId" size="16" value=" BOOK TITLE .. " style="border-radius:5px;border-width: thin;"></input> <!--  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp  &nbsp &nbsp &nbsp&nbsp --><!-- <label id="labelForTopicName"> TOPIC NAME : </label> -->
                                                 <!-- <br> -->
                                                 
                                                 
@@ -150,8 +152,8 @@
 
 
 
-                                        <div id="bottomDiv" style="left:33%;right:23%;top:90.5%;bottom:2%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
-                                                 <pre><label id="labelForTopicNumber"> TOPIC NUMBER  </label><select id="topicDropDown" >
+                                        <div id="bottomDiv" style="left:3%;right:4%;top:90.5%;bottom:1%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
+                                                <!--  <pre>  -->   <label style="left:40%; position: absolute; " id="labelForTopicNumber"> CHAPTER :  </label><select id="topicDropDown" style="left:50%; position: absolute; ">
                                                  <optgroup >
                                                   <option class="service-small" value="1">1</option>
                                                   <option value="2">2</option>
@@ -162,8 +164,8 @@
                                                   <option value="7">7</option>
                                                   <option value="8">8</option>
                                                   <option class="service-small" value="9">9</option>
-                                                  <option value="10">10</option></optgroup></select>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="buttonForBooks"  title="create new book / update existing book contents" class="masterTooltip" id="newBookButtonId" ><span> <font id="postBook" color="white"> post </font></span> </button> <!-- <label>  BOOK-PRICE (INR) : </label> <input size="4" id="bookPrice" style="border-radius:5px;" value="0.00" class="reClear2"></input> -->  <!-- <button id="addImageId">Add Image</button> -->
-                                </pre>
+                                                  <option value="10">10</option></optgroup></select>   <input size="13" id="newTopicInputId" style="left:60%; position: absolute;border-radius:5px;border-width: thin;" value="CHAPTER NAME.." class="reClear2"></input>  <!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp --><button style="right:3%; position: absolute; " class="buttonForBooks"  title="create new book / update existing book contents" class="masterTooltip" id="newBookButtonId" ><span > <font id="postBook" color="white"> POST </font></span> </button> <!-- <label>  BOOK-PRICE (INR) : </label> <input size="4" id="bookPrice" style="border-radius:5px;" value="0.00" class="reClear2"></input> -->  <!-- <button id="addImageId">Add Image</button> --> <label style="left:4%; position: absolute; " id="labelForCoverImage"> Book Cover Image * :  </label><input style="left:15%; position: absolute; " type="file" id="imageFile" />
+                               <!--  </pre> -->
                                         </div>
                                                 
 
@@ -184,14 +186,13 @@
         <div id="bookLayout" style="left:3%;top:3%;right:3%;bottom:3%;width: 96%; height: 96%; position: absolute; background-color: white;border-radius: 25px;z-index:5;display:none;">
                 
 
-                <div id="topDiv" style="left:27%;right:30%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
-                                <table align="center">
+                <div id="topDivBookLayout" style="left:27%;right:1%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
+                                <table align="center" >
                                 <tr>
                                 <th><label id="bookTitleWhileRead"> Book name : </label></th>
-                                
                             </tr>
                             <tr>
-                                <th><pre><label>TOPIC NUMBER  </label><select id="topicDropDownWhileRead">
+                                <th><pre><label id="labelForTopicNumberWhileRead">TOPIC NUMBER  </label><select id="topicDropDownWhileRead">
                                                   <option value="1">1</option>
                                                   <option value="2">2</option>
                                                   <option value="3">3</option>
@@ -207,7 +208,7 @@
                             </table>
                         </div>
         
-                <div id="innerDiv" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
+                <div id="innerDivBookLayout" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
                 <p id="titleId"></p>
                         
                         <div  id="divTextAreaForRead" style="width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:18px;z-index:5;position: absolute;outline:none; border: solid;border-width: thin;white-space : pre-wrap ; overflow-y: auto;" class="notes" contenteditable="true" class="textEditor">
@@ -216,7 +217,7 @@
                         </div>
                 </div>
 
-                <div id="bottomDiv" style="left:33%;right:28%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
+                <div id="bottomDivBookLayout" style="left:3%;right:3%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
                         <table align="center">
                         <tr>
                         <th><button class="buttonCloseBook" id="closeButton">   Close  </button></th>
@@ -253,7 +254,7 @@
                                 </div>
                                 <div id="imagePanelThinkers"
                         style="top: 11%; left: 14%; right: 16%; bottom: 68.5%; position: absolute; background-color: black;border-style:outset;border: 4px solid black;">
-                                <image id="profilePicThinkers" width="170" height="170" style="border-radius:5px" src="css/image.jpg" />
+                                <image id="profilePicThinkers" width="130" height="130" style="border-radius:5px" src="css/image.jpg" />
                             </div>
                             
                             <div id="adPanelThinkers"
@@ -358,7 +359,7 @@
         <div id="bookLayoutThinkers" style="left:3%;top:3%;right:3%;bottom:3%;width: 96%; height: 96%; position: absolute; background-color: white;border-radius: 25px;z-index:5;display:none;">
                 
 
-                <div id="topDivThinkers" style="left:27%;right:30%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
+                <div id="topDivThinkersBookLayout" style="left:27%;right:30%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
                                 <table align="center">
                                 <tr>
                                 <th><label id="bookTitleWhileReadThinkers"> Book name : </label></th>
@@ -381,7 +382,7 @@
                             </table>
                         </div>
         
-                <div id="innerDivThinkers" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
+                <div id="innerDivThinkersBookLayout" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
                 <p id="titleIdThinkers"></p>
                         
                         <div readonly id="divTextAreaForReadThinkers" style="width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:18px;z-index:5;position: absolute;outline:none;border: solid;border-width: thin;overflow-y: auto;white-space : pre-wrap ;" class="notes" contenteditable="true" class="textEditor">
@@ -390,7 +391,7 @@
                         </div>
                 </div>
 
-                <div id="bottomDivThinkers" style="left:33%;right:28%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
+                <div id="bottomDivThinkersBookLayout" style="left:33%;right:28%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
                         <table align="center">
                         <tr>
                         <th><button class="buttonCloseBook" id="closeButtonThinkers">   Close  </button></th>
@@ -431,7 +432,7 @@
                                 </div>
                                 <div id="imagePanelBooks"
                         style="top: 11%; left: 14%; right: 16%; bottom: 68.5%; position: absolute; background-color: black;border-style:outset;border: 4px solid black;">
-                                <image id="profilePicBooks" width="170" height="170" style="border-radius:5px" src="css/image.jpg" />
+                                <image id="profilePicBooks" width="130" height="130" style="border-radius:5px" src="css/image.jpg" />
                             </div>
                             
                             <div id="adPanelBooks"
@@ -544,7 +545,7 @@
         <div id="bookLayoutBooks" style="left:3%;top:3%;right:3%;bottom:3%;width: 96%; height: 96%; position: absolute; background-color: white;border-radius: 25px;z-index:5;display:none;">
                 
 
-                <div id="topDivBooks" style="left:27%;right:30%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
+                <div id="topDivBooksBookLayout" style="left:27%;right:30%;top:2%;bottom:92%;height:3%;width:50%; position: absolute; background-color: white;z-index:;border-radius: 25px;">
                                 <table align="center">
                                 <tr>
                                 <th><label id="bookTitleWhileReadBooks"> Book name : </label></th>
@@ -567,7 +568,7 @@
                             </table>
                         </div>
         
-                <div id="innerDivBooks" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
+                <div id="innerDivBooksBookLayout" style="left:7%;right:3%;top:12%;bottom:6%; position: absolute; background-color: white;z-index:5;border-radius: 25px;overflow-y: auto;">
                 <p id="titleIdBooks"></p>
                         
                         <div readonly id="divTextAreaForReadBooks" style="width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:18px;z-index:5;position: absolute;outline:none;border: solid;border-width: thin;overflow-y: auto;white-space : pre-wrap ;" class="notes" contenteditable="true" class="textEditor">
@@ -576,7 +577,7 @@
                         </div>
                 </div>
 
-                <div id="bottomDivBooks" style="left:33%;right:28%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
+                <div id="bottomDivBooksBookLayout" style="left:33%;right:28%;top:92%;bottom:2.5%; position: absolute; background-color: white;z-index:5;border-radius: 25px;">
                         <table align="center">
                         <tr>
                         <th><button class="buttonCloseBook" id="closeButtonBooks">   Close  </button></th>
@@ -590,6 +591,68 @@
 
 
         </div> <!-- end of presentBooks div -->
+
+
+
+
+           <!-- start of trendingDiv-->
+
+          <div id="fullScreenDivForTrending" class="tabcontent"
+                style="top:4%;left:0;width: 98%; height: 95.5%; position: absolute; background-color: black;border-style:none;overflow-y: auto; ">
+                
+               
+              
+         <!--  <div id="trending" style="left:3%;top:3%;right:3%;bottom:3%;width: 96%; height: 96%; position: absolute; background-color: black;border-radius: 25px;"> -->
+                
+
+                <div id="topDivBooksBookLayoutTrending" style="left:2%;right:80%;top:2%;bottom:1%; position: absolute; background-color: black;z-index:;border-radius: 25px;">
+                        <br>
+                        <br>
+                       <label style="color: white"> how Indian pm is changing the things </label>
+                         <label style="color: white"> how Indian pm is changing the things </label>
+                           <label style="color: white"> how Indian pm is changing the things </label>
+                             <label style="color: white"> how Indian pm is changing the things </label>
+                               <label style="color: white"> how Indian pm is changing the things </label>
+                                 <label style="color: white"> how Indian pm is changing the things </label>
+                                   <label style="color: white"> how Indian pm is changing the things </label>
+                             
+                </div>
+        
+                <div id="innerDivBooksBookLayoutTrending" style="left:25%;right:25%;top:2%; position: absolute; background-color: orange;z-index:;border-radius: 25px;scrollbar-face-color: red;text-align: center;">
+                <p id="titleIdBooks"></p>
+                        
+                    <!--  <div readonly id="divTextAreaForReadBooksTrending" style="left:1%;right:1%;top:1%;bottom:.01%;font-size:18px;z-index:;position: absolute;outline:none;border: solid;border-width: thin;overflow-y: auto;white-space : pre-wrap ;" class="notes" contenteditable="true" class="textEditor">
+
+                                
+                        </div>  -->
+
+                       nstitution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution  Going to the institution 
+                </div>
+
+                <div id="bottomDivBooksBookLayoutTrending" style="left:80%;right:2%;top:2%;bottom:1%; position: absolute; background-color: black;z-index:;border-radius: 25px;">
+                       <!--  <table align="center">
+                        <tr>
+                        <th><button class="buttonCloseBook" id="closeButtonBooksTrending">   Close  </button></th>
+                    </tr>
+                    </table> -->
+                    <br>
+                    <br>
+                      <label style="color: white"> how Indian pm is changing the things </label>
+                        <label style="color: white"> how Indian pm is changing the things </label>
+                          <label style="color: white"> how Indian pm is changing the things </label>
+                            <label style="color: white"> how Indian pm is changing the things </label>
+                              <label style="color: white"> how Indian pm is changing the things </label>
+                                <label style="color: white"> how Indian pm is changing the things </label>
+                                  <label style="color: white"> how Indian pm is changing the things </label>
+
+                </div>
+                
+
+         <!--  </div> -->
+
+
+
+        </div>   <!-- end of trending div -->
 
 
 
@@ -621,13 +684,13 @@
 
 optgroup { font-weight: bolder;background-color: black;color: white; }
 .notes {
-    background-attachment: local;
+   /* background-attachment: local;
     background-image:
         linear-gradient(to right, white 10px, transparent 10px),
         linear-gradient(to left, white 10px, transparent 10px),
         repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
     line-height: 31px;
-    padding: 8px 10px;
+    padding: 8px 10px;*/
 }
 .buttonForBooks{
     background-color: green; /* Green */
@@ -759,7 +822,7 @@ window.history.forward();
 
 
     
-            // jquery get method check on portal dev
+            // sample jquery get method check on portal dev
              /*jQuery.ajax({
                         url: "http://localhost:8080/odlPortal/odlPortal/login/aparnesh/gaurav",
                         dataType: 'text',
@@ -770,7 +833,7 @@ window.history.forward();
                         }); */
 
 
-            // jquery post method check on portal dev
+            // sample jquery post method check on portal dev
              /*jQuery.ajax({
                         url: "http://localhost:8080/odlPortal/odlPortal/loginOdlPortal",
                         type:"POST",
@@ -783,25 +846,74 @@ window.history.forward();
                     }   
                 });*/
 
+// $('html, body').animate({ scrollTop:  $(SELECTOR).offset().top - 50 }, 'slow' fullScreenDivForTrending
+    $("#fullScreenDivForTrending").scroll(function() {
+      // alert("hello");
+      // var element = $("#fullScreenDivForTrending");
+
+     // if($(window).scrollTop() == $(document).height() - $(window).height()) {
+       if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight){
 
 
+        // alert("reached the bottom of the div being scrolled");
+           // ajax call get data from server and append to the div
+           // alert("hello");
+           // $("#fullScreenDivForTrending").append("how are you ");
+
+           // sample jquery function to be written overhere
+           // http://localhost:8080/portal/library/doit/ny/ao
+
+           jQuery.ajax({
+                        url: "http://localhost:8080/portal/portal/login/getBookDetails/doit/rtc/rfg",
+                        dataType: 'text',
+                        success: function(data){
+                            // alert("came in the call back function"+data);
+                            // alert(" result :  "+data);
+                            // alert("pulled");
+                             $("#innerDivBooksBookLayoutTrending").append(data);
+                    }   
+                        }); 
+
+
+           // $("#innerDivBooksBookLayoutTrending").append("hellow how are you ");
+    }
+    });
               
     // this part would do the device responsiveness work , it would increase font size and weight of elements which are indicative , 
     // thankfully , the core text is already coming good with varying device sizes . 
     if(window.devicePixelRatio==2){
+      // eventOne.preventDefault();
          $("#testLabelForResponsive").prop("style","font-size:30px;color:white;font-weight:bold;");
          $("#labelForBooksResponsive").prop("style","font-size:30px;color:white;font-weight:bold;");
            $("#labelForTopicNumber").prop("style","font-size:25px;font-weight:bold");
+            $("#labelForTopicNumberWhileRead").prop("style","font-size:25px;font-weight:bold");
+           // bookTitleWhileRead
+
+           //working here 
+           $("#bookTitleWhileRead").prop("style","font-size:30px;font-weight:bold");
+           $("#topDiv").prop("style","left:27%;right:10%;top:2%;bottom:92%;height:3%;width:90%; position: absolute; background-color: white;z-index:5;border-radius: 25px;");
+
+
+
            // $("#labelForTopicName").prop("style","font-size:25px;font-weight:bold");
          $("#newCategoryInputId").prop("style","border-radius:5px;font-size:30px;font-weight:bold;");
+          $("#closeButton").prop("style","border-radius:5px;font-size:30px;font-weight:bold;");
          $("#newBookId").prop("style","border-radius:5px;font-size:30px;font-weight:bold;");
          $("#newTopicInputId").prop("style","border-radius:5px;font-size:30px;font-weight:bold;");
          $("#topicDropDown").prop("style","font-size:30px;font-weight: bolder")
-          $("#dropDown").prop("style","font-size: 30px;font-weight: bolder;background-color: white;color: black;")
-           $("#dropDownBooks").prop("style","font-size: 30px;font-weight: bolder;background-color: white;color: black;")
+         $("#topicDropDownWhileRead").prop("style","font-size:30px;font-weight: bolder")
+         $("#topicFetchedWhileRead").prop("style","font-size:30px;font-weight: bolder")
+         $("#dropDown").prop("style","font-size: 30px;font-weight: bolder;background-color: white;color: black;")
+         $("#dropDownBooks").prop("style","font-size: 30px;font-weight: bolder;background-color: white;color: black;")
          
-          $("#newCategoryInputButtonId").prop("style","font-size:25px;");
-         $("#divTextArea").prop("style","width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:50px;z-index:5;position: absolute;outline:none;white-space: pre-wrap;font-weight:590;font-color:black;font-style: helvetica;border:solid;border-width: thin;overflow-y:auto;word-wrap: break-word;");
+         $("#newCategoryInputButtonId").prop("style","font-size:25px;");
+
+        /* $("#divTextArea").prop("style","width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:70px;z-index:5;position: absolute;outline:none;white-space: pre-wrap;text-shadow:none;font-weight:bolder;font-style: helvetica;border:solid;border-width: thin;overflow-y:auto;word-wrap: break-word;-backface-visibility: hidden;transform: translateZ(0);transform:perspective(1px)");*/
+
+        $("#divTextArea").prop("style","width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:50px;z-index:5;position: absolute;outline:none;white-space: pre-wrap;text-shadow:none;font-weight:bold;font-style: helvetica;border:solid;border-width: thin;overflow-y:auto;word-wrap: break-word;");
+
+         $("#divTextAreaForRead").prop("style","width:90%;left:5%;right:5%;top:5%;bottom:5%;font-size:50px;z-index:5;position: absolute;outline:none; border: solid;border-width: thin;white-space : pre-wrap ; overflow-y: auto");
+
          $("#welcomeText").prop("size","6px");
          $("#logoutFont").prop("size","6");
          // $("#logoutFont").prop("weight","bold");
@@ -817,9 +929,10 @@ window.history.forward();
 
          // style="left:35%;right:23%;top:1%;bottom:91%; position: absolute; background-color: white;z-index:5;border-radius: 25px;"
            $("#myLibraryPanel").prop("style","top: .01%; left: 2%; right: .01%; bottom: .01%; position: absolute; background-color:black;border-style:none");
-         $("#upperDiv").prop("style","left:6%;right:23%;top:1%;bottom:91%; position: absolute; background-color: white;z-index:5;border-radius: 25px;");
+         $("#upperDiv").prop("style","left:36%;right:23%;top:1%;bottom:91%; position: absolute; background-color: white;z-index:5;border-radius: 25px;");
            // style="top: .01%; left: 21%; right: .01%; bottom: .01%; position: absolute; background-color:black;border-style:none">
-         
+           // left:33%;right:4%;top:90.5%;bottom:1%; position: absolute; background-color: white;z-index:5;border-radius: 25px;
+         $("#bottomDiv").prop("style","left:20%;right:4%;top:90.5%;bottom:1%; position: absolute; background-color: white;z-index:5;border-radius: 25px;");
          
        
     }
@@ -975,8 +1088,8 @@ window.history.forward();
                             url: "http://localhost:8080/portal/portal/login/getUserData/"+userName,
                             dataType: 'text',
                             success: function(data){
-                            /* getElement("profilePic").src = "";
-                             getElement("profilePic").src  = data;*/
+                             getElement("profilePic").src = "";
+                             getElement("profilePic").src  = data;
                              // an ajax db call to be made to fetch the list of books as per the user id and the category clicked 
                              testString = "Book1IntitialBook";
                              $("#waitSymbol").hide();
@@ -1335,7 +1448,41 @@ window.history.forward();
                      // start of method for closing of read view for logged out user
 
                     $("#closeButton").click(function(){
+                            // alert(username[1]+""+categoryname);
                             $("#bookLayout").hide();
+
+                             // var user = username[1];
+                                // alert("username is : "+user);
+                            // var categoryName = $("#dropDown").val();
+
+
+
+
+
+                             /* jQuery.ajax({
+                                url: "http://localhost:8080/portal/portal/login/getBookListForUserAndCategory/"+username[1]+"/"+categoryName,
+                                dataType: 'text',
+                                success: function(data){
+                                    
+                                                            listOfBooks = data;
+                                                            
+                                                            
+                                                            var parsedListOfBooks = listOfBooks.split(",");
+                                                            var parsedListOfBooks1=parsedListOfBooks.filter(function(itm,i,parsedListOfBooks){
+                                                                    return i==parsedListOfBooks.indexOf(itm);
+                                                                                });
+                                                            $(ddlBooks).empty();
+                                                            $(ddlBooks).append('<option value="' + firstVariableForDropdown + '">' + firstVariableForDropdown + "</option>'");
+                                                            for(var i=1;i<parsedListOfBooks1.length;i++){
+
+                                                                     $(ddlBooks).append('<option value="' + parsedListOfBooks1[i] + ' - ( full-view )">' + parsedListOfBooks1[i] + " - ( full-view )</option>'");
+                                                                     $(ddlBooks).append('<option value="' + parsedListOfBooks1[i] + ' - ( create-mode )">' + parsedListOfBooks1[i] + "- ( create-mode )</option>'");
+                                                            }
+                                                    
+                                                   
+                            }   
+                                }); */
+
                     });
                      // end of method for closing of read vierw for logged out user
 
@@ -1345,6 +1492,7 @@ window.history.forward();
                   
 
                $("#searchThinkers").keypress(function(e) {
+                alert("search clicked");
                  // $("#newCategoryInputId").val("");
                   e.stopImmediatePropagation();
                   if(e.which == 13) {
@@ -2555,9 +2703,9 @@ window.history.forward();
                 url: "http://localhost:8080/portal/portal/login/getUserData/"+username[1],
                 dataType: 'text',
                 success: function(data){
-                 // getElement("profilePic").src = "";
+                 getElement("profilePic").src = "";
                  // console.log(data);
-                 // getElement("profilePic").src  = data;
+                 getElement("profilePic").src  = data;
                  // an ajax db call to be made to fetch the list of books as per the user id and the category clicked 
                  testString = "Book1IntitialBook";
                  // alert("hello");
@@ -2680,17 +2828,41 @@ $("#newBookButtonId").click(function(){
         var categoryName = $("#dropDown").val();
         // alert("category name is : "+categoryName);
         // $("#divTextArea").css('white-space', 'pre-wrap');
-        var topicContents = "<pre>"+$("#divTextArea")[0].innerText+"</pre>";
-        // topicContents = "<pre>" + topicContents + "</pre>";
-        // alert(" formatted topic contents are : "+topicContents);
+       
         // alert("topic contents are : "+topicContents);
         var topicNumber = $("#topicDropDown").val();
         // alert("topic number : "+topicNumber);
-        var topicName = $("#newTopicInputId").val();
+         var topicName = $("#newTopicInputId").val();
         // alert("topic name is : "+topicName);
         var consolidateTopicNumberAndName = topicNumber + ":" + topicName;
         // alert("consolidateTopicNumberAndName"+consolidateTopicNumberAndName);
-        var dataForPost = user+"nishugaurav"+categoryName+"nishugaurav"+newBookName+"nishugaurav"+consolidateTopicNumberAndName+"nishugaurav"+topicContents;
+      
+        // alert("data for post is : "+dataForPost);
+         var dataForPostForTopicOne = user+"nishugaurav"+categoryName+"nishugaurav"+newBookName+"nishugaurav"+consolidateTopicNumberAndName+"nishugaurav";
+
+        var topicContents = "";
+        if(topicNumber=="1"){
+
+         readFile1(dataForPostForTopicOne,user,categoryName);
+            // alert("image uploaded");
+           
+          
+
+         // alert("validate : "+validate);
+          // );
+          // alert($("#divTextArea")[0].innerHTML+"here we are");
+        // topicContents = "<pre>"+$("#divTextArea")[0].innerHTML+"</pre>"; // previously innerText was used here for text display
+        // topicContents = "<pre>" + topicContents + "</pre>";
+        // alert(" formatted topic contents are : "+topicContents);
+        }
+        else{
+        topicContents = "<pre>"+$("#divTextArea")[0].innerText+"</pre>"; // previously innerText was used here for text display
+          var dataForPost = user+"nishugaurav"+categoryName+"nishugaurav"+newBookName+"nishugaurav"+consolidateTopicNumberAndName+"nishugaurav"+topicContents;
+        // topicContents = "<pre>" + topicContents + "</pre>";
+        // alert(" formatted topic contents are : "+topicContents);
+      
+         // alert(" formatted topic contents are : "+topicContents);
+       
 
         var ddlBooks = "#dropDownBooks";
     var listOfBooks = "";
@@ -2762,6 +2934,7 @@ $("#newBookButtonId").click(function(){
 
 
                         /**/
+                      }// end of else case where case is of topic number other than one 
                }// end of else statemenet where category is selected for book creation / updation                                      
 
 }); // end of new book create button click code
@@ -2771,18 +2944,148 @@ $("#newBookButtonId").click(function(){
 
 // adding functionality to append images to write zone
 
-$("#addImageId").click(function(){
+function getElement(id) { return document.getElementById(id); } // Get el by ID helper function
+
+function readFile1(dataForPostForTopicOne,user,categoryName) {
+  var urlDataww = "";
+ // alert("came in read file method");
+  if (getElement("imageFile").files && getElement("imageFile").files[0]) {
+    // alert("in the if case");
+    var FR= new FileReader();
+    FR.onload = function(e) {
+      // alert(username+"  "+password+"  "+emailId);
+     
+
+     urlDataww  = e.target.result;
+      // alert("result :"+result);
+             var imageElement = $('<img id="dynamic" style="height: 100%; width: 100%;  ">');
+ // alert(urlDataww);
+ imageElement.attr('src', urlDataww);
+  $("#divTextArea").html("");
+ imageElement.appendTo('#divTextArea');
+
+         topicContents = "<pre>"+$("#divTextArea")[0].innerHTML+"</pre>"; 
+         dataForPostForTopicOne = dataForPostForTopicOne + topicContents;
+       /*jQuery.ajax({
+                        url: "http://localhost:8080/portal/portal/register",
+                        type:"POST",
+                        contentType: "text/plain",
+                        data: username+"aparnesh-gaurav"+password+"aparnesh-gaurav"+emailId+"aparnesh-gaurav"+urlDataww,
+                        success: function(data){
+                          alert(data);
+                            
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                     
+                      alert("Registered , please login");
+                   
+                     // ? alert(xhr.status);
+                      // alert(thrownError);
+                    }   
+                }); */// closure for ajax call
+       // alert("Registered , please login .");
+
+       // start of post data entry
+                    var ddlBooks = "#dropDownBooks";
+    var listOfBooks = "";
+    var firstVariableForDropdown = "Please select book";
+
+
+       
+                         jQuery.ajax({
+                                url: "http://localhost:8080/portal/portal/register/attachBookDetailsWithCategoryAndUserNameThroughPost",
+                                type:"POST",
+                                contentType: "text/plain",
+                                data: dataForPostForTopicOne,
+                                success: function(data){
+                                // here , as part of the data received in callback should be the list of books as per the user id and cateogory
+                                // which also includes the book which just recently got saved . 
+
+                                alert(data);
+
+
+                                jQuery.ajax({
+                                url: "http://localhost:8080/portal/portal/login/getBookListForUserAndCategory/"+user+"/"+categoryName,
+                                dataType: 'text',
+                                success: function(data){
+                                    
+                                                            listOfBooks = data;
+                                                            
+                                                            
+                                                            var parsedListOfBooks = listOfBooks.split(",");
+                                                            var parsedListOfBooks1=parsedListOfBooks.filter(function(itm,i,parsedListOfBooks){
+                                                                    return i==parsedListOfBooks.indexOf(itm);
+                                                                                });
+                                                            $(ddlBooks).empty();
+                                                            $(ddlBooks).append('<option value="' + firstVariableForDropdown + '">' + firstVariableForDropdown + "</option>'");
+                                                            for(var i=1;i<parsedListOfBooks1.length;i++){
+
+                                                                     $(ddlBooks).append('<option value="' + parsedListOfBooks1[i] + ' - ( full-view )">' + parsedListOfBooks1[i] + " - ( full-view )</option>'");
+                                                                     $(ddlBooks).append('<option value="' + parsedListOfBooks1[i] + ' - ( create-mode )">' + parsedListOfBooks1[i] + "- ( create-mode )</option>'");
+                                                            }
+                                                    
+                                                   
+                            }   
+                                }); 
+
+
+
+                          // this part would update the price of the book in the table 'bookPaymentDetails'   
+                          /* jQuery.ajax({
+                                url: "http://localhost:8080/portal/portal/register/mapBookPriceToUniqueBookName/"+newBookName+"/"+$("#bookPrice").val(),
+                                dataType: 'text',
+                                success: function(data){
+                                    
+                                                           alert("response of mapping book price : "+data);
+                                                    
+                                                   
+                            }   
+                                }); */   
+
+
+                         // code for screen clear
+                         $("#divTextArea").text("");
+                         $("#newTopicInputId").val("");
+                         $("#newBookId").val("");
+                         $("#topicDropDown").val("1");
+
+
+                            }   
+                            });
+
+
+       // end of post data entry
+                                
+
+    };
+    
+    FR.readAsDataURL( getElement("imageFile").files[0]);
    
-   var imageElement = $('<img id="dynamic">');
+  }
+   
+  }
+
+/*$("#imageFile").click(function(){
+   alert("reading image file ");
+   readFile();
+
+ });*/
+   
+
+   /*
+   var imageElement = $('<img id="dynamic" style="height: 100%; width: 100%;  ">');
    // var img = $('<img id="dynamic">'); //Equivalent: $(document.createElement('img'))
    imageElement.attr('src', "data:image/jpeg;base64,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");
    imageElement.appendTo('#divTextArea');
 
- });  
+ });  */
 
 // end of adding funcationality to append images to write zone 
 
  $("#dropDown").change(function(){
+
+           $("#imageFile").show();
+           $("#labelForCoverImage").show();
             // alert("hello drop down"+this.value); 
             // alert("1");
             var selectedDropDownValue = this.value;
@@ -2829,6 +3132,9 @@ $("#addImageId").click(function(){
  
 
          $("#dropDownBooks").change(function(){
+
+           $("#imageFile").show();
+           $("#labelForCoverImage").show();
              
             var bookName = this.value;
           
@@ -2872,7 +3178,8 @@ $("#addImageId").click(function(){
                              var topicNameArray = receivedTopicFromDatabaseArray.split(":");
                              var topicName = topicNameArray[1];
                      $("#newTopicInputId").val(topicName);
-                         $("#divTextArea").text(pageContentWithoutPreValue);
+                        // alert("page content while rendering : "+pageContentWithoutPreValue);
+                         $("#divTextArea").html(pageContentWithoutPreValue); // use of text function previously instead of html function 
                          $("#topicDropDown").val("1");
                          $("#newBookId").val(bookTrimmedName);
 
@@ -2936,6 +3243,30 @@ $("#addImageId").click(function(){
                             // alert(" book details are :  "+data);
                             // resetting the editor after the save action 
                             // alert("data received is : "+data);
+                            if(topicNumber=="1"){
+                                  // alert("in the topic number one of topic wise fetching");
+                                  $("#imageFile").show();
+                                  $("#labelForCoverImage").show();
+
+
+                                 var splittedData = data.split("&&**");
+                                 var receivedTopicFromDatabaseArray = splittedData[1];
+                                 var pageContent = splittedData[0];
+                                 var topicNameArray = receivedTopicFromDatabaseArray.split(":");
+                                 var topicName = topicNameArray[1];
+                                   $("#newTopicInputId").val(topicName);
+                                // parsing page content to remove pre tags
+                                var pageContetnsWithPreTage = pageContent.split("pre>");
+                                var pageContentWithoutPre = pageContetnsWithPreTage[1];
+                                var pageContetnsWithPreTageArray = pageContentWithoutPre.split("</");
+                                var pageContentWithoutPreValue = pageContetnsWithPreTageArray[0];
+                                $("#divTextArea").html(pageContentWithoutPreValue);
+                                $("#waitSymbol").hide();
+                            }
+                            else{
+                              // removing the add book cover button for topics other than first number
+                              $("#imageFile").hide();
+                              $("#labelForCoverImage").hide();
                             if(data.length>0){
                               // alert("topic exists");
                              var splittedData = data.split("&&**");
@@ -2960,6 +3291,7 @@ $("#addImageId").click(function(){
                              $("#waitSymbol").hide();
                              $("#newTopicInputId").val("");
                            }
+                         }
 
                     }   
                         });
@@ -2998,6 +3330,7 @@ $("#addImageId").click(function(){
 
               // search thinkers functionality
             $("#searchThinkers").keypress(function(e) {
+              alert("search clicked");
                  // $("#newCategoryInputId").val("");
                   e.stopImmediatePropagation();
                   if(e.which == 13) {
@@ -4241,6 +4574,92 @@ function openCity(evt, cityName) {
        $("#searchBooks").hide();
         $("#logoutPlaceHolderThinkers").show();
       // $("registerPlaceHolder").show();
+     
+    }
+
+
+    /*  jQuery.ajax({
+                        url: "http://localhost:8080/portal/portal/login/getBookDetails/doit/ny/ao",
+                        dataType: 'text',
+                        success: function(data){
+                            // alert("came in the call back function"+data);
+                            // alert(" result :  "+data);
+                             $("#innerDivBooksBookLayoutTrending").append(data);
+                    }   
+                        }); */
+
+
+     if(cityName=="fullScreenDivForTrending"){
+         $("#innerDivBooksBookLayoutTrending").text("");
+            $("#innerDivBooksBookLayoutTrending").html("");
+               $("#innerDivBooksBookLayoutTrending").empty();
+     
+        jQuery.ajax({
+                        url: "http://localhost:8080/portal/portal/login/getBookDetails/doit/ny/ao",
+                        dataType: 'text',
+                        success: function(data){
+                            // alert("came in the call back function"+data);
+                            // alert(" result :  "+data);
+                             // $("#innerDivBooksBookLayoutTrending").text();
+                              // $("#innerDivBooksBookLayoutTrending").html("");
+                              var welcomeText = " SCROLL AND LEARN ! "
+                              var welcome = $("<span> <font   color=\"white\"> "+welcomeText+"</font></span>")
+
+                              var dataSplitted = data.split("&&**");
+                              var imageData = dataSplitted[0];
+                              var bookName = "BOOK NAME : AO";
+                              var button1 = $("<button>"+bookName+" </button>");
+                              button1.prop("class","buttonForBooks");
+                              button1.click(function(){
+                                       alert(" leading to the complete book  ");
+                              });
+
+
+                              var thinkerName = "THINKER NAME : DOIT";
+                              var button2 = $("<button>"+thinkerName+" </button>");
+                              button2.prop("class","buttonForBooks");
+                              button2.click(function(){
+                                       alert(" leading to the thinker details  ");
+                                         // $("#searchThinkers").click(function(){
+                                          
+                                           
+                                             $("#searchThinkers").trigger("keypress");
+                                               $("#searchThinkers").text("jack");
+                                              $("#buttonForThinkersId").trigger("click");
+                                           // });
+                                          
+                                          // });
+                              });
+                              
+                              var insertedText = "hello , how are you ? hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?hello , how are you ?  ... "
+
+                              var text = $("<span style=\"left:10%;right:10%;position:absolute\"> <font   color=\"white\"> "+insertedText+"</font></span>")
+
+                            /*  var nestedDiv = $("<div style=\"left:10%;right:10%;position:absolute\"></div>");
+                              nestedDiv.append(text);*/
+                             
+
+
+                              $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              $("#innerDivBooksBookLayoutTrending").append(welcome);
+                              $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              $("#innerDivBooksBookLayoutTrending").append(imageData);
+                              $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              // $("#innerDivBooksBookLayoutTrending").append(text);
+                              // $("#innerDivBooksBookLayoutTrending").append("<br>");
+                               // $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              // $("#innerDivBooksBookLayoutTrending").append(button1);
+                            
+                                $("#innerDivBooksBookLayoutTrending").append(button1);
+                                // $("#innerDivBooksBookLayoutTrending").append("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+                                  $("#innerDivBooksBookLayoutTrending").append("<br>");
+                               $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              $("#innerDivBooksBookLayoutTrending").append(button2);
+                               $("#innerDivBooksBookLayoutTrending").append("<br>");
+                              
+                              
+                    }   
+                        });
      
     }
 
