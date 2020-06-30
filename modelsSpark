@@ -1,0 +1,2 @@
+Spark are based on the concept of RDD , resilient distributed datasets , where the large data files are distributed over machines but on their 
+hard disc but on their RAMs . 
