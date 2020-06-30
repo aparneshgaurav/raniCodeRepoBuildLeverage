@@ -1,0 +1,4 @@
+Each reducer processes exclusively a partition , where partitions are created in output memory buffer or on the diskspace of the mapper machines .
+Each mapper produces outputs to a unique partition like partition id 1 or partition id 2 and so on . These partitions ( or say partition ids ) 
+can be on each mapper machine . Like partition p1 being on each mapper machine . 
+So reducer r1 processes partition p1 where p1 can be on m1 , m2 and m3 where m1 , m2 and m3 are mapper machines . 
