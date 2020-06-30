@@ -1,0 +1,2 @@
+Hive is sql like language over hdfs data leveraging mapReduce via an intermediate xml styled instruction template . 
+Hive code converts to a set  of mapReduce steps writtten in xml ( somewhat like oozie ) which triggers MR codes . 
