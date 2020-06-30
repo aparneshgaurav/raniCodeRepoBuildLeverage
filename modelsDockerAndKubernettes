@@ -1,0 +1,8 @@
+If docker is code and supporting libraries virtualized from the os layer , then kubernettes is like hadoop framework to it where the 
+concerned docker image in execution ( which is a container ) , where the containers are like map slots and reduce slots running inside 
+kubernettes nodes . Each node is like a slave in hadoop cluster and there is a kubernettes master node like nameNode in hadoop . 
+
+So kubernettes or let's say kubernettes master node spawns the required number of nodes inside which those containers can run . Just like 
+hadoop , inside a slave , many slots , like map slots and reduce slots can run , which means many jvm instances can run and inside each 
+map / reduce slot mapper / reducer class runs which are implementing mapper and reducer interface which is internally implementing map and 
+reduce methods . Similarly multiple containers are running inside each node of kubernettes cluster . Similar to hadoop cluster . 
