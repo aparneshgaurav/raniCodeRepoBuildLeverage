@@ -1,2 +1,17 @@
 Spark are based on the concept of RDD , resilient distributed datasets , where the large data files are distributed over machines but on their 
 hard disc but on their RAMs . 
+
+spark over hadoop is chosen for various reasons . First being files in hadoop are on rom across machines , while files in spark are in ram / memory
+across machines in cluster . So processing is in memory in case of spark and is fast . Second in hadoop , storage and computation are tightly 
+coupled , so mapreduce processes files which are only on hdfs . While in spark , it has connectors with kafka , amazon s3 , cassandra , hadoop 
+and it welcomes incoming data from all these sources ( batch / stream ) and processes it . so it has strategy of intermediate loading / storage 
+and then processing it , be it multiple storage systems . Other point is that in hadoop , we have to process files in iteration , in passes that output
+of one job getting sourced as input to anohter job , while in spark wiht help of functional apis , a stream of data can be iteratively processed
+with functions , like rdd.map.reduceByKey . So a stream can be processed ( even a small discretized stream ) can be passed through and entire 
+processing pipeline with help of chained functional apis . 
+
+transformation is about creating a logical pipeline of operations while action is actual processing ( not logical ) . action marks the end of 
+transformation pipeline and from there the entire transformation pipeline execution gets started till the finishing point of action , thereby 
+returning a concrete value . example is rdd.map.reduceByKey , so here till rdd.map is transformation while .reduceByKey marks the action . 
+
+
