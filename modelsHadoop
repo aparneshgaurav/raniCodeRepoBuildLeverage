@@ -2,3 +2,32 @@ Each reducer processes exclusively a partition , where partitions are created in
 Each mapper produces outputs to a unique partition like partition id 1 or partition id 2 and so on . These partitions ( or say partition ids ) 
 can be on each mapper machine . Like partition p1 being on each mapper machine . 
 So reducer r1 processes partition p1 where p1 can be on m1 , m2 and m3 where m1 , m2 and m3 are mapper machines . 
+LifeCycle of mapreduce : 
+Classes are driver class , mapper class , reducer class . 
+mapper class implements mapper interface , reducer class implements reducer interface  . 
+map method and reduce method is overridden hence . 
+map methods have key,value as input and output 
+input key value is generally like this , input key is offset of the start of the record from the start of the file while value is the record 
+suppose now the program is for word count , so we parse each record on spaces and for every time map function processes the record ( like one 
+execution of map processes one record ) , so the output is word and count 1 , output key is string and output value is integer . 
+default partitioner or custom partitoner code runs through all these output keys values which dump it into partitions in the output buffer of 
+or hard disc of the mapper machines 
+each reducer processes a partition where the reduce method takes input as key value where input is the key and value is the array of values corresponding to that key collated from across the mapper machines
+so for that word being the key , if the array of values are summed up , in that case we get the total word count for that word and that word and it's count is being emitted from the reducer as output key , value 
+inside the partitions at the mapper end , the keys are sorted , inside a partition at one mapper machine , a key can be repeated like at mapper machine m1 , keys,values inside partition p1 can be apple , 1 ; apple , 1 ; bat 1 . So we see they are sorted as apple is coming before bat 
+now in partition p1 at mapper machine m2 , values can be apple , 1 ; bat , 1 ; cat , 1 . Again we see , they are sorted on keys inside partition
+now when reducer processes partition p1 , it collates all the values and brings it to the reducer machine from across the mapper machines and network 
+so value is brings are apple , [1,1,1 ] ; bat , [1,1] ; cat [1] , now we see that these values are again merge sorted after collating it from the mapper machines . This merge sort runs at reducer machine . 
+Now one by one these keys in sorted order gets processed by reduce method 
+example input is apple ( key ) and [1,1,1] ( value ) and output of the reduce method here is apple , 3 for word count 
+reduce logic running on mapper sides is combiner , had that been invoked in this example , on mapper machine content in partition p1 at m1 would have been apple,2 ; bat , 1 . 
+every mapper proceses one input split 
+so if file size is 1000 records , in that case , one input split can be of 100 records 
+since it's never a good idea to do remote read , that a mapper is processing records from another block and another block can be on another machine 
+great is if data locality is being followed 
+so ideally input size should be equal to block size so that there are larger chances that mapper is processing the input split located inside 
+that block , so that data locality is achieved , space is optimally utilized and less chances of remote read . 
+to change the input split size we use custom input format which gives changed size of input splits 
+also for designing a case that for each offset , we are able to take next five lines as the input value , for that we use custom record readers 
+where the output key value can be changed to key being the same but value being 5 records instead of one record . I think the input key value to this method is initial offset and the input split as the value 
+
