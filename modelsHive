@@ -1,2 +1,7 @@
 Hive is sql like language over hdfs data leveraging mapReduce via an intermediate xml styled instruction template . 
 Hive code converts to a set  of mapReduce steps writtten in xml ( somewhat like oozie ) which triggers MR codes . 
+
+order by is all data reduced in a single reducer , chocking chances 
+distribute by is data getting distributed in separate reducers
+distirbuted by and sort by is data getting sorted in separate reducers
+clustered by is distributed by , sort by both 
