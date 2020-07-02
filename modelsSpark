@@ -14,4 +14,6 @@ transformation is about creating a logical pipeline of operations while action i
 transformation pipeline and from there the entire transformation pipeline execution gets started till the finishing point of action , thereby 
 returning a concrete value . example is rdd.map.reduceByKey , so here till rdd.map is transformation while .reduceByKey marks the action . 
 
-
+each partition of kafka ( spread over cluster ) will be processed by unique executor/consumer and inside that multiple cores will 
+spawn multiple jvms inside the cores which will run the map code and then will run reduce code .. and reduced result will be per executor 
+in terms of part r files . 
