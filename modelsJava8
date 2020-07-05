@@ -1,0 +1,16 @@
+key features : 
+stream and parallelism ..
+now using parallelism in java eight , using streams , parallelism can be achieved in free without writing thread codes leveraging the cores 
+of the computer . 
+passing code to methods , in a way passing a method to another method's argument / parameter .. 
+this feature is like passing code ( methods ) to another method in it's argument /parameter 
+can be used stream.map(somewhere this method can be found ) , which is having in which manner to process map method on this stream . 
+stateless functions ..
+it's like this type of functional programming is suited only for computing where there are not shared mutable values . 
+here we can't do things like syncrhonizing because they are against the fundamentals of parallelism since synchronized makes the code run in the 
+cores in sequential method and stops parallelism . 
+stream methods .. 
+it's like converting this steam to that stream . so a stream of data , which is an item from the data producing source in the form of continuous
+streams , so those streams are processed through stream methods and in a way in layman language , we say this stream gets converted to that stream
+. stream methods have the capability to run those methods on streams in different cores , where each stream of data is brought into the memory of that
+core and is processed by the method on that core . 
