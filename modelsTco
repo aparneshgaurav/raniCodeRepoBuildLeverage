@@ -1,0 +1,3 @@
+how cloud is better than in premises where we pay by adding / deleting instances , don't have to reserve them 
+with serverless compute , we let the machines in the cluster scale in and out as per the traffic load 
+also serverless compute lets us more intelligently use spot instances which remain on almsot ninty percent discount 
