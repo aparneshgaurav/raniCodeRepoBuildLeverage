@@ -1,0 +1,21 @@
+prepare , pre process data , do feature engineering 
+train data and create model 
+evaluate model by running it on new / test data . 
+
+spark mlib data pipeline 
+transform - preprocessing  , feature engineering 
+estimator - creating of model by dividing data in two parts , here using the training data set
+evaluator - running the created model and using it's prediction on test data set 
+
+example
+creating spark session from the rdd by loading the dataset 
+data getting divided into test and training data set 
+model getting created by running model on training data set 
+using the created model's prediction on test data set 
+
+algos
+supervised like classification - using histortial data's dependent variables like income and features like age to predict income . 
+supervised like regression - here for dependent variables  , we actually have numeric values *
+recommendation - 
+unsupervised like clustering - topic modelling , news clustering ( identifying structure from data ) , no discrete features 
+graph analytics - if people are vertices and lines connecting it are the relationships , then such analysis and predictions are done on graph analytics 
