@@ -17,4 +17,33 @@ returning a concrete value . example is rdd.map.reduceByKey , so here till rdd.m
 each partition of kafka ( spread over cluster ) will be processed by unique executor/consumer and inside that multiple cores will 
 spawn multiple jvms inside the cores which will run the map code and then will run reduce code .. and reduced result will be per executor 
 in terms of part r files .  
+
+-----------------------------------------------------------------------------------
+JavaRDD<String> lines = sc.textFile("data.txt");
+JavaRDD<Integer> lineLengths = lines.map(s -> s.length());
+int totalLength = lineLengths.reduce((a, b) -> a + b);
+
+so in above code maps run in parallel in executors of the machines and reducers are run locally 
+also we wee that in map , input is singularly  the line and it's length is computed and return type is integer . 
+return of map input which is a dataframe is stored in series of values stored in rdd of integer 
+and then locally this rdd is computed via the reduce method ( action which forces data to be written to edge node ) where in 
+iteratively two values of the rdd is passed , value sum is computed and subsequently total sum is computed and returned / written 
+to the edge node . 
+
+JavaRDD<String> lines = sc.textFile("data.txt");
+JavaRDD<Integer> lineLengths = lines.map(new Function<String, Integer>() {
+  public Integer call(String s) { return s.length(); }
+});
+int totalLength = lineLengths.reduce(new Function2<Integer, Integer, Integer>() {
+  public Integer call(Integer a, Integer b) { return a + b; }
+});
+
+in the above code only difference is that in map function , a function is passed as an argument 
+at first level input and output data types are mentioned for this entire passed method / function 
+then the actual function with name , return type and parameters and method logic , like in a normal method is written  . 
+in first case , we see input is the line and return type is integer which is the total of words in that line 
+in second case we see that iteratively the rdd is processed by sending first two values and then summing it up and then doing 
+it iteratively over the entire rdd , until the rdd ends 
+
+
  
