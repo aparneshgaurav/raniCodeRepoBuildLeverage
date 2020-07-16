@@ -57,6 +57,9 @@ JavaPairRDD<String, Integer> counts = pairs.reduceByKey((a, b) -> a + b); // app
 We could also use counts.sortByKey(), for example, to sort the pairs alphabetically, and finally counts.collect() to bring them back to the driver program as an array of objects.
 });
 
+--------------------------------------
+shuffle and reduceByKey in conjunction with tuples and pairRdd are exactly like mapReduce codes 
+
 
 
 
