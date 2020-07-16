@@ -19,6 +19,8 @@ spawn multiple jvms inside the cores which will run the map code and then will r
 in terms of part r files .  
 
 -----------------------------------------------------------------------------------
+non tuple style and non javaPairRdd 
+
 JavaRDD<String> lines = sc.textFile("data.txt");
 JavaRDD<Integer> lineLengths = lines.map(s -> s.length());
 int totalLength = lineLengths.reduce((a, b) -> a + b);
@@ -29,6 +31,7 @@ return of map input which is a dataframe is stored in series of values stored in
 and then locally this rdd is computed via the reduce method ( action which forces data to be written to edge node ) where in 
 iteratively two values of the rdd is passed , value sum is computed and subsequently total sum is computed and returned / written 
 to the edge node . 
+
 
 JavaRDD<String> lines = sc.textFile("data.txt");
 JavaRDD<Integer> lineLengths = lines.map(new Function<String, Integer>() {
@@ -44,6 +47,18 @@ then the actual function with name , return type and parameters and method logic
 in first case , we see input is the line and return type is integer which is the total of words in that line 
 in second case we see that iteratively the rdd is processed by sending first two values and then summing it up and then doing 
 it iteratively over the entire rdd , until the rdd ends 
+
+------------------------------------------------------------------------------------------------------------
+tuples style and javaPairRdd style 
+  
+  JavaRDD<String> lines = sc.textFile("data.txt");
+JavaPairRDD<String, Integer> pairs = lines.mapToPair(s -> new Tuple2(s, 1)); // example apple , 1 ; boy ,1  , again in some line apple , 1
+JavaPairRDD<String, Integer> counts = pairs.reduceByKey((a, b) -> a + b); // apple , 2 ; boy , 1
+We could also use counts.sortByKey(), for example, to sort the pairs alphabetically, and finally counts.collect() to bring them back to the driver program as an array of objects.
+});
+
+
+
 
 
  
