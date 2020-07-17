@@ -36,7 +36,7 @@ import org.apache.log4j.Logger;
  * 1947 50
  * 1951 56
  * 
- * @author Aparnesh.Gaurav
+ * @author Aparnesh.Gaurav , if you are using cloudera distro , the third party jars on eclipse have to be bound at /usr/lib/hadoop/client
  *
  */
 public class MaxTemperatureDriver {
