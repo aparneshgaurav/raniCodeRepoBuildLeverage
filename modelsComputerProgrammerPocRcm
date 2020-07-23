@@ -6,4 +6,4 @@ rani.ai , apis as a service and rani.ai uitilities leveraging those services
 use both of them to full in mnc companies 
 
 model  - push it to pocRcm
-modelCodeWithSkeletonForBasicOperation - push it to pocRcm
+modelCodeWithBasicSkeletonForBasicOperation - push it to pocRcm
