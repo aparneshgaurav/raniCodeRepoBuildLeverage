@@ -5,12 +5,12 @@ key skills java and aws
 rani.ai , apis as a service and rani.ai uitilities leveraging those services 
 use both of them to full in mnc companies 
 
-model  - push it to pocRcm
-modelCodeWithBasicSkeletonForBasicOperation - push it to pocRcm
+model  - push it to pocRcm  
+modelAndCodeWithBasicSkeletonForBasicOperation - push it to pocRcm
 
 
 work for energy
 have git repo ( either model or modelCode for primary and secondary techs ) 
-primary : big data ( batch / realtime ) 
+primary : core java & big data ( batch / realtime ) 
 secondary : application (java/springboot/restful webservice) / machine learining engineer ( mlib ) 
 tertiary ( linked list - with iteration / operations and recursion ) 
