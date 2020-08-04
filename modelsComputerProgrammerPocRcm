@@ -6,9 +6,9 @@ rani.ai , apis as a service and rani.ai uitilities leveraging those services
 use both of them to full in mnc companies 
 
 
-itr1 : rough model (oreilly) gitPush [extra : ]
-itr2 : rough modelAndCode (basicSkeletonBasicOperation) (blogs) gitPush [extra : tutorialPoint ]
-itr3 : rough model ( more and more ) (oreilly and blogs) gitPush [extra : ]
+step 1 : rough model (oreilly) gitPush [extra : ]
+step 2 : rough modelAndCode (basicSkeletonBasicOperation) (blogs) gitPush [extra : tutorialPoint ]
+step 3 : rough model ( more and more ) (oreilly and blogs) gitPush [extra : ]
 daily rough model 50
 daily rough modelAndCode 20
 
