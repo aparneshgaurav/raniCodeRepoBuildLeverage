@@ -28,12 +28,27 @@ kinesis
 sql 
 noSQl
 
+----------------------------
+date 19th august 
+-----------------------------
 ngrTemp
 truck iot
 deviceId,temperature or acceleration , timestamp : at the end it will also use structured streaming
 
+spark removes i/o and network latency in shuffles since rdds are in memory 
+map functions are transformations that process the portion of rdds in each partition and lets  a new rdd be loaded in cache of the cluster
+once reduce is called , then , without any shuffle , the reduce method , which is an action , does the computation on the entire rdd and without
+any shuffle in the reduce phase here , the reduced data is collected in driver machine 
+the purpose of keys , shuffles and paired rdds are only here while distributing the data on to the cluster , most preferably to handle the skew 
+of the data
 
 
+
+
+
+
+
+-----------------------------------------
 
 
 
