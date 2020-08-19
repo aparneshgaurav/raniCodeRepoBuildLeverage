@@ -28,6 +28,11 @@ kinesis
 sql 
 noSQl
 
+ngrTemp
+truck iot
+deviceId,temperature or acceleration , timestamp : at the end it will also use structured streaming
+
+
 
 
 
