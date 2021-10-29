@@ -41,7 +41,7 @@ df4 = df3.withColumn("propertiesMap",create_map(
 df4.show()
 df4.select("propertiesMap").show()
 # check code git push
-
+# check code git push another 
 
 
 
