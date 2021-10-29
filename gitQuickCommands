@@ -12,3 +12,5 @@ git push -u origin master
 
 git remote add origin https://github.com/aparneshgaurav/thoughtsfly.com.git
 git push -u origin master
+
+comment here that also to note that git local branch ahead of mater means that there are more files and more new changers in your local git repo than the git remote origin branch 
