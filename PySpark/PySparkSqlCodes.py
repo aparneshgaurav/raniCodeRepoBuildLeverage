@@ -1,4 +1,9 @@
 # Databricks notebook source
+# /c/Users/HP/pocRcm
+# use gitbash on windows 
+# navigate to above folder 
+# and after that regular git commands
+
 #import pyspark
 #from pyspark.sql import SparkSession
 #spark = SparkSession.builder.appName('sparkApp').getOrCreate()
@@ -41,36 +46,158 @@ df4 = df3.withColumn("propertiesMap",create_map(
 df4.show()
 df4.select("propertiesMap").show()
 # check code git push
-# check code git push another 
+
 
 
 
 # COMMAND ----------
+
+#import statements to be run once 
+from pyspark.sql import functions as F
+from pyspark.sql.functions import coalesce
+from pyspark.sql.functions import col,lit,explode,when,create_map,flatten
+from pyspark.sql import DataFrame
+from pyspark.sql import types as T
+from pyspark.sql.types import *
+from pyspark.sql.functions import array
+from pyspark.sql.types import StructType,StructField, StringType, IntegerType
+
+# COMMAND ----------
+
+#read from a file using schema , the path address , reading the csv with file path and delimieter 
+
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+df.select("name").show()
+df.printSchema()
+
+
+
+# COMMAND ----------
+
+# using WithColumn which generally expects to be returned to a dataframe , also using column renamed after that . 
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+df.select("name").show()
+
+df2=df.withColumn("newlyAddedColumn11", lit("IndianPlayers**"))
+df3=df2.withColumnRenamed("tech","technology")
+df3.show()
+
+
+# COMMAND ----------
+
+
+# knowing the usage of select clause with or without withColumn   , part 1 
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+df.select("name").show()
+
+df.withColumn("newlyAddedColumn11", lit("IndianPlayers**")).select("newlyAddedColumn11","name","tech").show()
+df.withColumnRenamed("tech","technology").select("technology").show()
+df.select("tech").show()
+# withColumn when used , then in same line you can use select , but in afresh , this needs to be returned to a new #dataframe , immutable dataframe and then select can be used on top of it . 
+# below code will show error 
+df.select("technology")
+df.select("newlyAddedColumn11").show()
+
+# df2=df.withColumn("newlyAddedColumn11", lit("IndianPlayers**"))
+# df3=df2.withColumnRenamed("tech","technology")
+# df3.show()
+
+# COMMAND ----------
+
+
+# knowing the usage of select clause with or without withColumn  part 2 
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+df.select("name").show()
+
+dfTwo = df.withColumn("newlyAddedColumn11", lit("IndianPlayers**")).select("newlyAddedColumn11","name","tech")
+dfTwo.select("newlyAddedColumn11").show()
+dfThree = dfTwo.withColumnRenamed("tech","technology").select("technology")
+dfThree.select("technology").show()
+
+# COMMAND ----------
+
+
+# knowing the usage of select clause with or without withColumn  part 3 , using show and return to dataframe not to be used togetheer
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+df.select("name").show()
+
+#  statement a
+dfTwo1 = df.withColumn("newlyAddedColumn11", lit("IndianPlayers**")).select("newlyAddedColumn11","name","tech").show()
+# statement b , to be run if the statement a is commented
+# dfTwo1 = df.withColumn("newlyAddedColumn11", lit("IndianPlayers**")).select("newlyAddedColumn11","name","tech")
+dfTwo1.select("newlyAddedColumn11").show()
+
+# COMMAND ----------
+
+# usage of UDF in spark sql 
+def convertCase(str):
+    resStr=str.upper()
+    return resStr 
+
+schemaHere = StructType().add("name",StringType(),True).add("tech",StringType(),True)
+df = spark.read.option("header",True).option("delimiter",",").schema(schemaHere).csv("dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt")
+df.show()
+
+
+# converting the python function to a function using UDf to be applied on each of the rows of the particular column 
+convertCaseUDF = udf(lambda rowOfColumn: convertCase(rowOfColumn)) 
+
+df.select("name",convertCaseUDF("name") , "tech" ,  convertCaseUDF("tech")).show()
+
+# COMMAND ----------
+
+# struct type can either be struct field , which is atomic or it can be a struct type as well 
+# So , in a way , struct type can be a struct type having a struct field or even a struct type which can be futher
+# containing a struct field . 
+
+# For nested struct type , use double round brackets where necessary 
+# For the feel of an array , use square brackets 
 
 structureData = [
-    (("James","","Smith"),"36636","M",3100),
-    (("Michael","Rose",""),"40288","M",4300),
-    (("Robert","","Williams"),"42114","M",1400),
-    (("Maria","Anne","Jones"),"39192","F",5500),
-    (("Jen","Mary","Brown"),"","F",-1)
-  ]
-structureSchema = StructType([
-        StructField('name', StructType([
-             StructField('firstname', StringType(), True),
-             StructField('middlename', StringType(), True),
-             StructField('lastname', StringType(), True)
-             ])),
-         StructField('id', StringType(), True),
-         StructField('gender', StringType(), True),
-         StructField('salary', IntegerType(), True)
-         ])
+                 (('aparnesh','gaurav'),'java'),
+                 (('aparajita','srivastava'),'python')
+                ]
 
-df2 = spark.createDataFrame(data=structureData,schema=structureSchema)
-df2.printSchema()
-df2.show(truncate=False)
-df2.show()
+schemaHere = StructType([StructField('name' , StructType([StructField('firstName',StringType(),True),StructField('lastName',StringType(),True)])) ,  StructField('technology' , StringType() , True)])
+
+dfStruct = spark.createDataFrame(data=structureData , schema = schemaHere)
+dfStruct.show()
+dfStruct.select(dfStruct.name.firstName).alias("FN").show()
+dfStruct.select(dfStruct.name.lastName).alias("LN").show()
 
 # COMMAND ----------
+
+# For nested struct type , use double round brackets where necessary 
+# For the feel of an array , use square brackets 
+# 1. StructType is a collection of struct fields 
+# 2. StructType can be containing another StructType in a nested way
+
+structureData1 = [
+                 ('aparnesh','java'),
+                 ('aparajita','python')
+                ]
+
+schemaHere1 = StructType([StructField('firstName',StringType(),True),StructField('lastName',StringType(),True)])
+
+dfStruct = spark.createDataFrame(data=structureData1 , schema = schemaHere1)
+dfStruct.show()
+
+# COMMAND ----------
+
+# 1. use of explode of array data , use of double explode on double array data 
+# 2. use of a dataframe after being operated to be returned to the same dataframe which can be used for show operation in the next line
+# 3. arrays or nested arrays in the data to be marked with square brackets on which explode gonna work 
 
 arrayArrayData = [
   ("James",[["Java","Scala","C++"],["Spark","Java"]]),
@@ -86,14 +213,10 @@ df.show(truncate=False)
 df = df.select(df.name,explode(df.subjectsUnExplodedNestedArray).alias("firstLevelExplodedColumnOnSubjects"))
 df.show(truncate=False)
 # df = df.select(df.name,explode(df.subjects).alias("cloum"))
-df.select(df.name,explode(df.firstLevelExplodedColumnOnSubjects).alias("secondLevelExplodedColumnOnSubjects")).show(truncate=False)
+df = df.select(df.name,explode(df.firstLevelExplodedColumnOnSubjects).alias("secondLevelExplodedColumnOnSubjects"))
+df.show(truncate=False)
 
-
-# #explodes one last layer of arrays
-# df = df.select(df.name,explode(df.subjects).alias("firstLevelExplodedColumnOnSubjects")).show(truncate=False)
-
-# # df = df.select(df.name,explode(df.subjects).alias("cloum"))
-# df.select(df.name,explode(df.cloum).alias("secondLevelExplodedColumnOnSubjects")).show(truncate=False)
+df.select(df.secondLevelExplodedColumnOnSubjects).show()
 
 #flatten is nothing but recursive explode
 #explodes totally by exploding all arrays into atomic data strucutres , commenting the below correct line 
@@ -101,13 +224,16 @@ df.select(df.name,explode(df.firstLevelExplodedColumnOnSubjects).alias("secondLe
 
 # COMMAND ----------
 
-#spark data frames creation 
+# 1. understanding data using comma , square brackets and round brackets 
+# 2. use of toDF with columns and without columns 
+# 3. use of withColumn and lit
+
+
 columns = ["language","users_count"]
 data = [("Java", "20000"), ("Python", "100000"), ("Scala", "3000")]
 
 # spark = spark.builder.appName('SparkByExamples.com').getOrCreate()
 rdd = spark.sparkContext.parallelize(data)
-
 
 dfFromRDD1 = rdd.toDF()
 dfFromRDD1.printSchema()
@@ -412,3 +538,31 @@ df.show()
 # COMMAND ----------
 
 cat /dbfs/mnt/ccdb/databricks/new/config/redshiftconfig.ini
+
+# COMMAND ----------
+
+#spark data frames creation 
+columns = ["language","userCount"]
+data = [("Java", "20000"), ("Python", "100000"), ("Scala", "3000")]
+
+# spark = spark.builder.appName('SparkByExamples.com').getOrCreate()
+rdd = spark.sparkContext.parallelize(data)
+
+
+dfFromRDD1 = rdd.toDF()
+dfFromRDD1.printSchema()
+
+columns = ["language","userCount"]
+dfFromRDD1 = rdd.toDF(columns)
+# dfFromRDD1.printSchema()
+
+# dfFromRDD1.show(truncate=False)
+df  = dfFromRDD1
+df.show(truncate=False)
+df.select(df.language).show()
+df.select(df.language).withColumn("newColumn",lit('abc')).show()
+df = df.language.alias("newLanguage")
+df = df.withColumn('newColumn1',lit('abc'))
+df.show()
+# df = df.language.alias("newLanguage").withColumn("newColumn",lit('abc')).alias('newColumnName')
+df.show()
