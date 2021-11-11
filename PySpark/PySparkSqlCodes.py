@@ -4,6 +4,10 @@
 # navigate to above folder 
 # and after that regular git commands
 
+
+# C:\Users\agaurav>databricks workspace import_dir C:\Users\agaurav\cdl-databricks\projects\Jobs\ /Users/agaurav@databrickscompany.com/Jobs
+# C:\Users\agaurav\cdl-databricks\projects\Jobs\common\functions\func1.py -> /Users/agaurav@aligntech.com/Jobs/common/functions/func1
+
 #import pyspark
 #from pyspark.sql import SparkSession
 #spark = SparkSession.builder.appName('sparkApp').getOrCreate()
