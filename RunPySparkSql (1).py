@@ -4,6 +4,10 @@
 #spark = SparkSession.builder.appName('sparkApp').getOrCreate()
 #dbfs:/FileStore/shared_uploads/agaurav@aligntech.com/checkRepo/check_csv.txt
 
+
+
+# this code base would help understand spark fundamentals 
+
 from pyspark.sql import functions as F
 from pyspark.sql.functions import coalesce
 from pyspark.sql.functions import col,lit,explode,when,create_map,flatten
