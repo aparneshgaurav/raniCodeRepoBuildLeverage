@@ -1,0 +1,11 @@
+			git status 
+			git branch 
+			Go to the folder where git repo is initialized and codes are there . 
+			edit the file / code file . 
+			then do git status 
+			then do git add . 
+			then do git status 
+			then do git commit -m "message of the git "
+			then do git pull ( this will sync your local repo with remote repo , you first have to do a pull before you push)
+			then do git push origin 
+			( the above commands are useful when you are dealing with single branch )
