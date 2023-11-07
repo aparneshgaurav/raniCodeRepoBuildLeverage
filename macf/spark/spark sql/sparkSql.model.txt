@@ -1,0 +1,40 @@
+
+
+temp
+#sparksql 
+make table from dataframe 
+df.createOrReplaceTempView("tableNameLikePeople")
+sqlDataframe = spark.sql(" select * from people " ) 
+sqlDataframe.show()
+
+for across sessions, register it in common database , 
+spark.newSession().sql("select * from global_temp.people") 
+
+no need to understand more of lambda here , you can understand lambda separately as well . 
+
+#sparkSql
+
+temp
+
+
+first we generate dataframes in saprk 
+
+then we can have spark sql being fired upon those spark dataframes . 
+
+dataframes generation can be done by using data  source formats like csv , parquet , avro , json , xml , tab separated .
+
+then we create table view from those dataframes and then have spark sql queries on those temp tables and views . 
+
+df = spark.read .csv or spark.read.json or spark.read.txt (  file path ) , it's like this .. 
+
+also other route is to have create temp views and tables without dataframes generation 
+
+spark.read.csv.header(true).csv( path to the file ) .createTempView('tablename")
+
+spark.sql("select col1 from tableName ") 
+
+where works exactly like any ql syntax .. 
+
+select from where col in () order by col 
+
+select state , count(star ) from zipcodes group by state having count greater than something 
