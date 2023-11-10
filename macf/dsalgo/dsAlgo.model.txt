@@ -1,0 +1,116 @@
+
+fibonacci(n) { 
+
+if n==0 {
+return 1 
+}
+else{
+return  n*fibonacci(n-1)
+}
+
+}
+
+
+control list , rest is same . 
+do stack via list 
+do queue via list 
+do double list via list 
+do tree via list 
+list plus recursion is all it takes 
+
+public LinkedList{
+
+LinkedList next ; 
+Integer data ; 
+
+pubilc LinkedList(data){
+this.data = data ; 
+}
+
+set method for data 
+get method for data 
+set method for list 
+get method for list 
+
+}
+
+insert(head , n,data ) {
+temp=head ; 
+n=0
+while(temp.next!= null ) {
+n++;
+if( m==n){
+nextNode = temp.next ; 
+newNode = new LinkedList(data ) ; 
+temp.next = newNode; 
+newNode.next = nextNode ; 
+
+}
+
+}
+
+
+
+
+package dsAlgo;
+
+public class SingleLinkedList {
+	
+	
+	Integer data ; 
+	SingleLinkedList next ; 
+	
+	public SingleLinkedList(Integer data) {
+		this.data = data ; 
+	}
+
+	public Integer getData() {
+		return data;
+	}
+
+	public void setData(Integer data) {
+		this.data = data;
+	}
+
+	public SingleLinkedList getNext() {
+		return next;
+	}
+
+	public void setNext(SingleLinkedList next) {
+		this.next = next;
+	}
+	
+	
+	
+	public void traverseNodes(SingleLinkedList head) {
+		SingleLinkedList temp = head ; 
+		while((temp.getNext()!=null) || (temp.getNext()==null)) {
+			System.out.println("data is : "+temp.getData());
+			if(temp!=null) {
+			temp = temp.getNext();
+			}
+			if(temp==null) {
+				break;
+			}
+//			System.out.println("data is : "+temp.getData());
+		}
+	}
+	
+	public static void main(String[] args) {
+		SingleLinkedList newNode = new SingleLinkedList(10);
+		SingleLinkedList nextNode = new SingleLinkedList(20);
+		newNode.setNext(nextNode);
+		nextNode.setNext(null);
+		newNode.traverseNodes(newNode);		
+		
+		
+	}
+
+}
+
+
+/*
+ * output is
+ * 
+ * data is : 10 data is : 20
+ */
