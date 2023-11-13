@@ -38,3 +38,107 @@ where works exactly like any ql syntax ..
 select from where col in () order by col 
 
 select state , count(star ) from zipcodes group by state having count greater than something 
+
+
+
+
+
+import pyspark
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName('pyspark-by-examples').getOrCreate()
+
+arrayData = [
+        ('James',['Java','Scala'],{'hair':'black','eye':'brown'}),
+        ('Michael',['Spark','Java',None],{'hair':'brown','eye':None}),
+        ('Robert',['CSharp',''],{'hair':'red','eye':''}),
+        ('Washington',None,None),
+        ('Jefferson',['1','2'],{})
+
+df = spark.createDataFrame(data=arrayData, schema = ['name','knownLanguages','properties'])
+df.printSchema()
+df.show()
+
+
+
+
++----------+--------------+--------------------+
+|      name|knownLanguages|          properties|
++----------+--------------+--------------------+
+|     James| [Java, Scala]|[eye -> brown, ha...|
+|   Michael|[Spark, Java,]|[eye ->, hair -> ...|
+|    Robert|    [CSharp, ]|[eye -> , hair ->...|
+|Washington|          null|                null|
+| Jefferson|        [1, 2]|                  []|
++----------+--------------+--------------------+
+
+
+df2 = df.select( df.name , explode ( df.knowLanguages)
+df2.printSchema()
+df2.show()
+
+
++---------+------+
+|     name|   col|
++---------+------+
+|    James|  Java|
+|    James| Scala|
+|  Michael| Spark|
+|  Michael|  Java|
+|  Michael|  null|
+|   Robert|CSharp|
+|   Robert|      |
+|Jefferson|     1|
+|Jefferson|     2|
+
+df3 = df.select( df.name , explode ( df.properties) 
+df3.printShecma()
+df3.show()
+
++-------+----+-----+
+|   name| key|value|
++-------+----+-----+
+|  James| eye|brown|
+|  James|hair|black|
+|Michael| eye| null|
+|Michael|hair|brown|
+| Robert| eye|     |
+| Robert|hair|  red|
+
+lambda is expression based manipulation . 
+
+
+
++---------+--------+------+------+
+|firstname|lastname|gender|salary|
++---------+--------+------+------+
+|    James|   Smith|     M|    30|
+|     Anna|    Rose|     F|    41|
+|   Robert|Williams|     M|    62|
++---------+--------+------+------+
+
+# Refering columns by index.
+rdd2=df.rdd.map(lambda x: 
+    (x[0]+","+x[1],x[2],x[3]*2)
+    )  
+df2=rdd2.toDF(["name","gender","new_salary"]   )
+df2.show()
++---------------+------+----------+
+|           name|gender|new_salary|
++---------------+------+----------+
+|    James,Smith|     M|        60|
+|      Anna,Rose|     F|        82|
+|Robert,Williams|     M|       124|
+
+
+rdd2=rdd.map(lambda x: (x,1))
+for element in rdd2.collect():
+    print(element)
+This yields below output.
+
+pyspark rdd map transformation
+
+apple,1
+bat,1
+apple,1
+batter,1
+and so on ... 
