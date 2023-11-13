@@ -323,6 +323,8 @@ https://spark.apache.org/docs/latest/ml-pipeline.html#properties-of-pipeline-com
 
 further read the model and it's examples from this page . aboev page . 
 
-
+spark streaming model deployment is pending 
+spark mlib code sample is pending 
+different algos read is pending 
 
 -----

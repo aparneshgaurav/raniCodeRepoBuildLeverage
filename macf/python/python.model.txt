@@ -1,0 +1,48 @@
+
+thislist = [ "apple" , "bat" ]
+
+for x in thislist:
+  print(x)
+
+thislist.reverse()
+
+
+
+thisdict  = {
+"x" : "xmas"
+"y" : "year"
+}
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+
+for y in x:
+  print(y)
+  print(car.get(y))
+
+
+
+def my_function(parameter):
+  print(" function getting executed with this parameter " + parameter)
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+
+
+ function getting executed with this parameter Emil
+ function getting executed with this parameter Tobias
+ function getting executed with this parameter Linus
+
+
+lambdaAsyncExpressionFunctionName = lambda a, b: a * b
+print(lambdaAsyncExpressionFunctionName(5, 6))
+
+output is 
+30 
