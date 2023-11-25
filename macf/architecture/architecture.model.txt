@@ -2,3 +2,17 @@
 
 data platforms architecture : 
 https://docs.google.com/document/d/1VJJoeWyqO-Htv2nP7oJv2iaKlDHdSLI4xm0VdqsMal4/edit
+
+
+	when you say data platforms 
+		you must also know reporting 
+		you must also know ml 
+		you must also know ingestion and compute 
+		all of it 
+		databases
+		database modelling
+		no sqls
+		comparions of cloud vendors
+
+
+		

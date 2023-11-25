@@ -329,6 +329,43 @@ different algos read is pending
 
 -----
 
-temp
-13th November
+data  = [   ("apple" , "bat") , () , () ]
+
+prepare by model count increase , model revisions . prepare by adding and enriching parameters , iterations . 
+
+columns = [  "column1" , "column2 "  ]
+
+df = spark.createDataFrame( data = data , schema = columns ) 
+
+df.printSchema()
+
+df.show()
+
+generally the strings are in double quoates and numbers not in double  quotes 
+
+-------------------------
+
+
+df.withColumnRenamed("dob" , "dateOfBirth") 
+
+in spark config , set hive warehouse path 
+adn then while creating spark session , write .enableHiveSupport . 
+
+Then direct query hive table and fetch it in spark dataframe . 
+
+-------------------
+
+intent of group by queries is to get cluster wise details , counts sums etc .. 
+
+also for one group by parameter you can have a clustered detail of only one other attribute . 
+
+from here you will be pasting the content of databricks codes onto here 
+
+
+if you end up writing something twice to git , it's okay but try not to miss rather 
+
+
+to persist 
+-----------------------------------------------
+
 
