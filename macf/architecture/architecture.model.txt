@@ -13,6 +13,26 @@ https://docs.google.com/document/d/1VJJoeWyqO-Htv2nP7oJv2iaKlDHdSLI4xm0VdqsMal4/
 		database modelling
 		no sqls
 		comparions of cloud vendors
+----------
 
+The best tech for each task:
 
-		
+- batch pipeline: Apache Spark
+- data visualization: Apache Superset
+- web api: NextJS (spring boot close second)
+- SQL database: Postgres
+- NoSQL database: DynamoDB
+- Graph database: Neo4j
+- front end web: React
+- front end mobile: React Native (Flutter close second)
+- CI/CD system: GitHub Actions
+- data quality checks: Great Expectations (Deequ close second)
+- data lake file management: Apache Iceberg (Delta Lake a close second)
+- job orchestration: Apache Airflow (Mage and/or Prefect close second)
+- machine learning model: XGBoost (linear regression close second)
+- LLM: GPT-4.5 Turbo
+- programming language: Python (Rust close second)
+- message queue: Kafka (RabbitMQ close second)
+- cache: Redis (Memcached close second)
+
+		--------------------
