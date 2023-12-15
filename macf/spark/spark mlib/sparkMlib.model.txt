@@ -16,3 +16,29 @@ further read the model and it's examples from this page . aboev page .
 spark streaming model deployment is pending 
 spark mlib code sample is pending 
 different algos read is pending 
+
+
+----------------------------------
+
+
+ROLES & RESPONSIBILITIES:
+
+• Build technology stack for AI/ML use cases from concept to production deployment
+• Build data pipelines, ingestion of structured & structured data for model training
+• Create Generative AI pipelines & technology stack e.g., orchestration, prompt engineering,
+fine tuning etc.
+• Deploy AI/ML models into production and build API layer for application integration
+
+
+CAPABILITIES:
+
+• Very high proficiency in Python programming language, knowledge of other languages
+such as R, Java would be a plus.
+• Knowledge of various AI/ML models including deep learning models
+• Knowledge of Generative AI stack – Large Language Models / Foundation Models, vector
+databases, orchestration stack
+• Hand on experience in building AI orchestration with frameworks like LangChain.
+• Knowledge of vector databases e.g., Pinecone, Chroma etc.
+• Deep understanding of data processing frameworks e.g., Data Bricks, Airflow etc.
+• Knowledge of API frameworks Django, Flask etc.
+• Understanding of cloud data & AI stack on AWS / Azure / GCP is preferred
