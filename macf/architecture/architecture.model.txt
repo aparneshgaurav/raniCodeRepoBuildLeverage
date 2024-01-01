@@ -36,3 +36,7 @@ The best tech for each task:
 - cache: Redis (Memcached close second)
 
 		--------------------
+
+data engineering tools 
+
+https://docs.google.com/document/d/1EbuL-73DGN-DPSzTKj3PkX-8HX7vPDHMchhdceOjgiI/edit?disco=AAABDhKN_qQ
