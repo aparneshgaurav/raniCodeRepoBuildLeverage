@@ -41,4 +41,8 @@ databases, orchestration stack
 • Knowledge of vector databases e.g., Pinecone, Chroma etc.
 • Deep understanding of data processing frameworks e.g., Data Bricks, Airflow etc.
 • Knowledge of API frameworks Django, Flask etc.
+<<<<<<< HEAD
 • Understanding of cloud data & AI stack on AWS / Azure / GCP is preferred
+=======
+• Understanding of cloud data & AI stack on AWS / Azure / GCP is preferred
+>>>>>>> 74db9274d84f175d5ead4926ee96ed1e833d6ff2

@@ -160,6 +160,7 @@ Just that j is i plus 1 , and k is j plus 1 .
 
 ------------------------
 
+<<<<<<< HEAD
 theory 
 	2 examples 
 	covering the breadth 
@@ -168,3 +169,27 @@ theory
 	like linked list , double linked list skeleton of data elements and methods 
 
 
+=======
+
+#algos
+	recursion
+	skeleton
+	incremental 
+	four of each type and then do more 
+	have four written in codes 
+	understnadn algo 
+	write your own codes 
+	algorithms are really very cool on gfg 
+	coding i will try and then code it up 
+	gfg can be trusted 
+	read algo from gfg 
+	try it yourself 
+	copy code to eclipse 
+	run it yourself 
+	mergeSort i am doing right now 
+
+
+ds algo 
+		think algo yourself , gfg is very cool here 
+		if output isnt' helping you , then run the existing code adn then re write that code yourself at some point of time , preferwably in a clone file . 
+>>>>>>> 74db9274d84f175d5ead4926ee96ed1e833d6ff2

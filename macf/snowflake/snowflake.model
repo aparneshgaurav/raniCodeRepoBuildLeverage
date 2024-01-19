@@ -1,0 +1,16 @@
+https://medium.com/hands-on-apache-hbase/an-introduction-to-apache-hbase-2cdd1d9ff13
+
+	here the rows are kept horizontally fist . 
+	then we see that using rowkeys , the rows are serialised , where let's say row key is the primary key
+	now with primarykey made as offset , all rows of a column are stored in one file , where each entry is combo of primary key as offset and the column value . 
+	example 001-Ram , 002-Shyam and so on . 
+			001-Sita, 002-Gita and so on .. 
+
+			now data for ram , shyam which is male column will be in one file . 
+			and data for sita , gita which is female column will be in other file . 
+
+			so column name will lead us to the file id stored in the distributed file system , which is called as micro partition . 
+
+			And the offsets will help us to get particularly those rows from only those columns ( fileIds / micro partitions ) . Offsets or the range of offsets i mean . 
+
+			this leads to faster access of data , that too distributed data where if the micro partition of one column is on one node and other column's micro partition is on another node , then parallely if there is one thread  / per core accessing / reading that micro partition , then we can have this process in parallel and then we can finally merge it and render it on the client machine doing the query . 
