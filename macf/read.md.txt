@@ -3,7 +3,7 @@ cachedModelEditor
 #dsalgo
 #sparkCore
 #kafka
-#lessons
+#lesson
 #python
 #scala
 
@@ -367,5 +367,33 @@ if you end up writing something twice to git , it's okay but try not to miss rat
 
 to persist 
 -----------------------------------------------
+
+
+#sparkmlib
+
+mainly it's estimator and then transformer . 
+It's a series and  combination of those . 
+trasnformer is an algorithm which takes dataframe as a parameter in i'ts fit method and produces a model . 
+
+that model when applided on the dataframe products anotehr dataframe , whic is a predicted dtatframe with appended column / label which is the predicted column . This step is transformation . 
+
+parameters , estimators and and transfsformers have parameters . 
+like LR has setIterator(10) values so it iterates 10 tiiems before producing a model .
+
+models are saved on hard disck using save methods . 
+
+https://spark.apache.org/docs/latest/ml-pipeline.html#properties-of-pipeline-components 
+
+further read the model and it's examples from this page . aboev page . 
+
+spark streaming model deployment is pending 
+spark mlib code sample is pending 
+different algos read is pending 
+
+#sparkmlib
+
+
+
+
 
 

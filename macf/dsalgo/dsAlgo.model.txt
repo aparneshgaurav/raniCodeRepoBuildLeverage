@@ -160,3 +160,11 @@ Just that j is i plus 1 , and k is j plus 1 .
 
 ------------------------
 
+theory 
+	2 examples 
+	covering the breadth 
+	it's good approach for ds algo for tomorrow 
+	have skeleton also ready 
+	like linked list , double linked list skeleton of data elements and methods 
+
+
