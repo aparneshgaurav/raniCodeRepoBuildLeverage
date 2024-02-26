@@ -142,3 +142,290 @@ bat,1
 apple,1
 batter,1
 and so on ... 
+
+
+---------------------------------------------
+---------------------------------------------
+
+create table dpgTechnologies ( technology varchar ) 
+
+create table dpgUsers( emailid varchar , technology varchar , paidStatus boolean ) 
+
+alter table dpgusers add column ( dpgUserId varchar )
+
+alter table dpgusers drop column technology;
+
+alter table dpgUsers drop column paidstatus
+
+insert into dpgusers values  ( 'gaurav@gmail.com' , '1')
+
+insert into dpgusers values  ( 'khushi@gmail.com' , '1')
+
+insert into dpgtechnologies values ( 'java')
+
+insert into dpgtechnologies values ( 'spark')
+
+insert into dpgtechnologies values ( 'jquery')
+
+alter table dpgtechnologies add column ( technologyid varchar ) 
+
+update  dpgtechnologies set technologyid='1' where technology = 'java'
+
+update  dpgtechnologies set technologyid='2' where technology = 'spark'
+
+update  dpgtechnologies set technologyid='2' where technology = 'jquery'
+
+insert into dpgusers values ('rani' , '3')
+
+insert into dpgusers values ('anku' , '4')
+
+insert into dpgusers values ('banku' , '5')
+
+insert into dpgusers values ('vidhu' , '6')
+
+alter table dpgusers alter column dpguserid set not null
+
+alter table dpgusers add primary key (dpguserid)
+
+delete from dpgusers where dpguserid = '6' 
+
+create table factsOfdpgusersandtechnologies ( dpguserid varchar ,  technolgoies varchar ) 
+
+drop table factsofdpgusersandtechnologies
+
+create table factsOfdpgusersandtechnologies ( dpguserid varchar ,  technologyid varchar ) 
+
+insert into factsofdpgusersandtechnologies values ( '2' , '1' ) 
+
+insert into factsofdpgusersandtechnologies values ( '3' , '2' ) 
+
+insert into factsofdpgusersandtechnologies values ( '4' , '1' ) 
+
+insert into factsofdpgusersandtechnologies values ( '5' , '2' ) 
+
+insert into factsofdpgusersandtechnologies values ( '5' , '1' ) 
+
+select * from factsofdpgusersandtechnologies 
+
+ ( select emailid from dpgusers where dpguserid in ( select dpguserid from factsofdpgusersandtechnologies where technologyid = '2' )  ) 
+EMAILID  
+rani
+banku
+
+select emailid , technologyid  from dpgusers  inner join factsofdpgusersandtechnologies  on dpgusers.dpguserid =  factsofdpgusersandtechnologies.dpguserid  where technologyid='2'
+
+EMAILID  	TECHNOLOGYID  
+rani	2
+banku	2
+
+create table emailTech ( emailid varchar  , technologyid varchar ) 
+
+insert into emailtech ( select emailid , technologyid  from dpgusers  inner join factsofdpgusersandtechnologies  on dpgusers.dpguserid =  factsofdpgusersandtechnologies.dpguserid  where technologyid='2' )
+
+alter table emailtech rename  to emailidtechid
+EMAILID  	TECHNOLOGYID  
+rani	2
+banku	2
+
+
+select emailid , technology from dpgtechnologies inner join v1 on v1.technologyid = dpgtechnologies.technologyid 
+EMAILID  	TECHNOLOGY  
+rani	jquery
+banku	jquery
+
+--- nested join --- three joins together via view 
+
+create view v2 as select emailid  , technologyid from dpgusers inner join factsofdpgusersandtechnologies on dpgusers.dpguserid = factsofdpgusersandtechnologies.dpguserid where technologyid ='2' 
+result is view created 
+
+select emailid , technology from dpgtechnologies inner join v2 on v2.technologyid = dpgtechnologies.technologyid
+
+EMAILID  	TECHNOLOGY  
+rani	jquery
+banku	jquery
+
+-------------------------------------
+
+select upper(emailid) , technologyid from v2 limit 1 
+
+
+UPPER(EMAILID)  	TECHNOLOGYID  
+RANI	2
+
+select top 1 upper(emailid) , technologyid from v2 order by emailid asc
+UPPER(EMAILID)  	TECHNOLOGYID  
+BANKU	2
+
+select top 1 upper(emailid) , technologyid from v2 order by emailid desc
+UPPER(EMAILID)  	TECHNOLOGYID  
+RANI	2
+
+ alter table dpgusers add column ( city varchar ) 
+
+
+update dpgusers set city = 'delhi' 
+
+
+update dpgusers set city = 'patna' where emailid = 'rani'
+
+select * from dpgusers 
+
+EMAILID  	DPGUSERID  	CITY  
+anku	4	delhi
+banku	5	delhi
+rani	3	patna
+
+select count(dpguserid ) , city from dpgusers  group by city having count(dpguserid ) >1 order by city asc
+COUNT(DPGUSERID)  	CITY  
+2	delhi
+
+when doing a group by , in that case the column on which you are diong group by , should also be fetched as a parameter . Also any aggregation shouldn't happen on the column on which you are doing group by , rather it should happen on one of the other columns . 
+--------------------------------------
+
+select city  , RANK() OVER (    
+    PARTITION BY city
+    ORDER BY dpgusers desc )    
+AS 'useridRankingPerCity' FROM dpgusers;
+
+result : 
+this will give the ranking and ranks of each dpguser ranked on dpguserid within each city . 
+rank function in my sql server isn't installed . 
+
+----------------------------------------
+----------------------------------------
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+create table netflix ( deviceid varchar , accountid varchar , date varchar ) 
+
+insert into netflix values ( 'd4' , 'a1' , 'jun' ) 
+
+ create view view8 as (   select count(deviceid ) as cdcount , accountid from netflix group by accountid )
+
+select count(accountid ) , cdcount  from   view8 group by cdcount 
+
+COUNT(ACCOUNTID)  	CDCOUNT  
+1	11
+1	5
+
+-----------
+
+query of run selected mode : 
+
+drop view view8 if exists ;
+ create view view8 as (   select count(deviceid ) as cdcount , accountid from netflix group by accountid );
+select count(accountid ) , cdcount  from   view8 group by cdcount ;
+
+output : 
+drop view view8 if exists ;
+Update count: 0
+(0 ms)
+
+ create view view8 as (   select count(deviceid ) as cdcount , accountid from netflix group by accountid );
+Update count: 0
+(2 ms)
+
+select count(accountid ) , cdcount  from   view8 group by cdcount ;
+COUNT(ACCOUNTID)  	CDCOUNT  
+2	2
+1	11
+1	5
+
+
+---------------------------------------------
+---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
