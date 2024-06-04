@@ -148,17 +148,18 @@ and so on ...
 ---------------------------------------------
 
 create table dpgTechnologies ( technology varchar ) 
+# this will create the table with one column of type varchar
 
 create table dpgUsers( emailid varchar , technology varchar , paidStatus boolean ) 
-
+# this will create the table with three columns with type varchar and boolean
 alter table dpgusers add column ( dpgUserId varchar )
-
+# altered table to add  a column , while adding we have to give name and datatype 
 alter table dpgusers drop column technology;
-
+#altered the table , while dropping column , we just need to give the column name . 
 alter table dpgUsers drop column paidstatus
-
+# same as above .
 insert into dpgusers values  ( 'gaurav@gmail.com' , '1')
-
+# insertion via values syntax , which has to be given values as the parameter , strings to be put under comma 
 insert into dpgusers values  ( 'khushi@gmail.com' , '1')
 
 insert into dpgtechnologies values ( 'java')
