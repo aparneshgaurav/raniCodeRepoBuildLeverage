@@ -238,8 +238,10 @@ banku	jquery
 
 create view v2 as select emailid  , technologyid from dpgusers inner join factsofdpgusersandtechnologies on dpgusers.dpguserid = factsofdpgusersandtechnologies.dpguserid where technologyid ='2' 
 result is view created 
+( Here you joined one fact talbe and one dimnesion table on the common id and also did put a condition of where from either of the tables , in this particular case it was from the facts table for a technology id two )
 
 select emailid , technology from dpgtechnologies inner join v2 on v2.technologyid = dpgtechnologies.technologyid
+( in the view2 which was created in the preceeding statement , we did a join on this view with a dimension table dpgtechnologies on the common id which is technologyid , and after that fetched other columns like email id and technolgy where ever there was a match / inner join for the common technology id  )
 
 EMAILID  	TECHNOLOGY  
 rani	jquery
