@@ -337,6 +337,32 @@ COUNT(ACCOUNTID)  	CDCOUNT
 ---------------------------------------------
 ---------------------------------------------
 
+#dbvisualizer
+select * from dpgUsers
+select * from dpgTechnologies
+delete from dpgTechnologies where technology='jquery'
+show tables 
+select * from factsOfdpgusersandtechnologies
+select * from dpgUsers
+delete from dpgUsers where emailid='khushi@gmail.com'
+select * from dpgUsers
+select * from dpgUsers where dpgUserId='1'
+create view viewOfUsersUsingTechnologies as select dpgUsers.emailid  ,  factsOfdpgusersandtechnologies.technologyid from dpgUsers inner join factsOfdpgusersandtechnologies on dpgUsers.dpguserid = factsOfdpgusersandtechnologies.dpguserid ;
+create view emailidAndTechnology as select dpgTechnologies.technology , viewOfUsersUsingTechnologies.emailid from viewOfUsersUsingTechnologies inner join dpgTechnologies on viewOfUsersUsingTechnologies.technologyid = dpgTechnologies.technologyid
+select * from dpgUsers
+select * from dpgTechnologies 
+select * from emailidAndTechnology
+select count(technology), emailid from emailidAndTechnology group by emailid
+select count(technology), emailid from emailidAndTechnology group by emailid having count(technology) >1
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' ) 
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' ) 
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='spark'))
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+select emailid , RANK () over ( order by emailid desc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+
+
+
 
 
 
