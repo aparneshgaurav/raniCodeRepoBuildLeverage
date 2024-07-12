@@ -57,7 +57,7 @@ Required
 4 (Above average)
 How do you rate yourself in Model measurement frameworks on a scale of 1-5? (5 being the highest)How do you rate yourself in Model measurement frameworks on a scale of 1-5? (5 being the highest) 
 Required
-4 (Above average)
+4 (Above average) 
 How do you rate yourself in Mathematical and Statistical modelling on a scale of 1-5? (5 being the highest)How do you rate yourself in Mathematical and Statistical modelling on a scale of 1-5? (5 being the highest) 
 Required
 3 (Average)
