@@ -40,3 +40,66 @@ The best tech for each task:
 data engineering tools 
 
 https://docs.google.com/document/d/1EbuL-73DGN-DPSzTKj3PkX-8HX7vPDHMchhdceOjgiI/edit?disco=AAABDhKN_qQ
+
+
+# some ml skills 
+How do you rate yourself in Evaluation of LLMs, grounding and hallucination detection on a scale of 1-5? (5 being the highest)How do you rate yourself in Evaluation of LLMs, grounding and hallucination detection on a scale of 1-5? (5 being the highest) 
+Required
+4 (Above average)
+How do you rate yourself in linear ML algorithms and non-linear ML algorithms on a scale of 1-5? (5 being the highest)How do you rate yourself in linear ML algorithms and non-linear ML algorithms on a scale of 1-5? (5 being the highest) 
+Required
+4 (Above average)
+How do you rate yourself in RAG, Search algorithms, and Multi Lingual Modelling on a scale of 1-5? (5 being the highest)How do you rate yourself in RAG, Search algorithms, and Multi Lingual Modelling on a scale of 1-5? (5 being the highest) 
+Required
+5 (Expert)
+How do you rate yourself in Model deployments, monitoring and AutoML frameworks & MLOps frameworks on a scale of 1-5? (5 being the highest)How do you rate yourself in Model deployments, monitoring and AutoML frameworks & MLOps frameworks on a scale of 1-5? (5 being the highest) 
+Required
+4 (Above average)
+How do you rate yourself in Model measurement frameworks on a scale of 1-5? (5 being the highest)How do you rate yourself in Model measurement frameworks on a scale of 1-5? (5 being the highest) 
+Required
+4 (Above average)
+How do you rate yourself in Mathematical and Statistical modelling on a scale of 1-5? (5 being the highest)How do you rate yourself in Mathematical and Statistical modelling on a scale of 1-5? (5 being the highest) 
+Required
+3 (Average)
+How do you rate yourself in using NLP algorithms such as keyword extraction, topic modelling using transformer models like BERT, T5, BART on a scale of 1-5? (5 being the highest)How do you rate yourself in using NLP algorithms such as keyword extraction, topic modelling using transformer models like BERT, T5, BART on a scale of 1-5? (5 being the highest) 
+Required
+4 (Above average)
+How do you rate yourself in evaluating the performance of classification and regression models on a scale of 1-5? (5 being the highest)How do you rate yourself in evaluating the performance of classification and regression models on a scale of 1-5? (5 being the highest) 
+Required
+3 (Average)
+How do you rate yourself in Python on a scale of 1-5? (5 being the highest)How do you rate yourself in Python on a scale of 1-5? (5 being the highest) 
+Required
+3 (Average)
+How do you rate yourself in multivariate and statistical analysis on a scale of 1-5? (5 being the highest)How do you rate yourself in multivariate and statistical analysis on a scale of 1-5? (5 being the highest) 
+Required
+Select an option
+Please make a selection
+How do you rate yourself in Time Series and anomaly detection algorithms on a scale of 1-5? (5 being the highest)How do you rate yourself in Time Series and anomaly detection algorithms on a scale of 1-5? (5 being the highest) 
+Required
+Select an option
+Please make a selection
+How do you rate yourself in unsupervised learning (specifically, k-means clustering and hierarchical clustering) on a scale of 1-5? (5 being the highest)How do you rate yourself in unsupervised learning (specifically, k-means clustering and hierarchical clustering) on a scale of 1-5? (5 being the highest) 
+Required
+Select an option
+Please make a selection
+Please indicate your last CTC
+Please enter a valid answer
+Please indicate your last RSU
+Please enter a valid answer
+Please indicate your nationality
+Please enter a valid answer
+Please indicate your citizenship
+Please enter a valid answer
+Do you hold a valid work permit for the country where the job is located?Do you hold a valid work permit for the country where the job is located? Required
+
+Yes
+
+No
+Please make a selection
+Have you been previously employed with Freshworks?Have you been previously employed with Freshworks? Required
+
+Yes
+
+No
+Please make a selection
+Your message to the hiring manager
