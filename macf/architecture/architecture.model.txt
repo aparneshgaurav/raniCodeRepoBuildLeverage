@@ -103,3 +103,29 @@ Yes
 No
 Please make a selection
 Your message to the hiring manager
+
+--------------------------------------------------------------------
+	#sql
+		Have two tables . Two dimension tables like POjo tables / classes of java . Primary keys of the rows of those dimension tables would be like object's hashcodes of the objects corresponding to those POJO classes . 
+		Then there are facts tables which are only having details of the object's hashvalues of both the pojo classes . 
+		create view viewName as select 
+		When you do the join , you first based on pj1 and FC based on a common id , you query other stuffs and create a view out of that . That other id which you queried remains as a primary key in the pj2 , so based on the other common id now , you query the other remaning columns . 
+		You need to see how group by happens . secondary group by would happen . 
+
+   #cdc on data platforms 
+   	just a matter of no large number of small files . 
+   	also not to have so much large files that lambda fifteen minutes sla fails.
+   	so bin packing or having those lambda holders shoudl be configured accordingly . 
+   #columnarDatabase
+   	each column  a file 
+   	those files can be on separate computers 
+   	columns in same column family can have adjacency and can be atleast on same / nearby machines . 
+   	metadata files know which columns are on which machines and which offsets have been queried . They are the brains . 
+   #catalog
+   	#pushToROne
+   	##hashtag
+   	differential changes are being put to kafka . 
+   	then from there to delta lake . 
+   	Then to snowflake 
+   	where the metadata tables are designed . 
+   	you can talk design of the atlas here . 
