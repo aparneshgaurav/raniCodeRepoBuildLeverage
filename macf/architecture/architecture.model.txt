@@ -128,4 +128,10 @@ Your message to the hiring manager
    	then from there to delta lake . 
    	Then to snowflake 
    	where the metadata tables are designed . 
-   	you can talk design of the atlas here . 
+	you can talk design of the atlas here . 
+-------------------------------------------------------
+some good preparation materials : 
+	https://www.turing.com/interview-questions/machine-learning
+	https://www.turing.com/interview-questions/data-engineer
+	https://www.turing.com/interview-questions/spark
+   
