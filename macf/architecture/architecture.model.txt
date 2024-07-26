@@ -134,4 +134,18 @@ some good preparation materials :
 	https://www.turing.com/interview-questions/machine-learning
 	https://www.turing.com/interview-questions/data-engineer
 	https://www.turing.com/interview-questions/spark
-   
+-------------------------------------------------------------   
+# Read the input file and Calculating words count
+text_file = sc.textFile("firstprogram.txt")
+counts = text_file.flatMap(lambda line: line.split(" ")) \
+                            .map(lambda word: (word, 1)) \
+                           .reduceByKey(lambda x, y: x + y)
+
+Note that here "text_file" is a RDD and we used "map", "flatmap", "reducebykey" transformations
+
+Finally, initiate an action to collect the final result and print. Use the below snippet to do it and Here collect is an action that we used to gather the required output.
+
+# Printing each word with its respective count
+output = counts.collect()
+for (word, count) in output:
+    print("%s: %i" % (word, count))
