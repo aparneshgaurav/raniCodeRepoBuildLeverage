@@ -364,7 +364,116 @@ select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers 
 
 
 
+------------------------------------------------------------------------------
+dbVisualizer codes back up recent . 
+select * from dpgUsers
+select * from dpgTechnologies
+delete from dpgTechnologies where technology='jquery'
+show tables 
+select * from factsOfdpgusersandtechnologies
+select * from dpgUsers
+delete from dpgUsers where emailid='khushi@gmail.com'
+select * from dpgUsers
+select * from dpgUsers where dpgUserId='1'
+create view viewOfUsersUsingTechnologies as select dpgUsers.emailid  ,  factsOfdpgusersandtechnologies.technologyid from dpgUsers inner join factsOfdpgusersandtechnologies on dpgUsers.dpguserid = factsOfdpgusersandtechnologies.dpguserid ;
+create view emailidAndTechnology as select dpgTechnologies.technology , viewOfUsersUsingTechnologies.emailid from viewOfUsersUsingTechnologies inner join dpgTechnologies on viewOfUsersUsingTechnologies.technologyid = dpgTechnologies.technologyid
+select * from dpgUsers
+select * from dpgTechnologies 
+select * from emailidAndTechnology
+select count(technology), emailid from emailidAndTechnology group by emailid
+select count(technology), emailid from emailidAndTechnology group by emailid having count(technology) >1
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' ) 
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' ) 
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='spark'))
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+select emailid , RANK () over ( order by emailid desc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+select * from ccc.factsOfdpgusersandtechnologies;
+select * from ccc.factsOfdpgusersandtechnologies;
 
+SELECT * from  ccc.dpgUsers
+select * from ccc.dpgTechnologies
+select * from ccc.factsOfdpgusersandtechnologies
+delete from ccc.factsOfdpgusersandtechnologies where  dpguserid='2'
+select * from ccc.dpgUsers
+select * from ccc.factsOfdpgusersandtechnologies
+
+show tables 
+select * from thoughtsbookdb.login
+delete from thoughtsbookdb.login where username = 'ramuser#gmail.com'
+
+select username,urldata from thoughtsbookdb.login where length(username) > 7  and urldata not like '%data:image%' 
+
+
+
+show tables 
+CREATE TABLE FILESAVE( USERNAME VARCHAR(255), FILENAME VARCHAR(255), CODEFIELD VARCHAR(510) PRIMARY KEY, FILECONTENT TEXT );
+CREATE TABLE SAMPLEFILES( FILEID VARCHAR(510) PRIMARY KEY, CODECONTENT TEXT);
+ALTER TABLE FILESAVE ADD NUMBEROFCODERUNS INT DEFAULT 0;
+create table chatbox(userid varchar(550) primary key, commentstring TEXT);
+
+----------------------------------------------------------------------------------------
+
+select * from thoughtsbookdb.SAMPLEFILES
+----------------------------------------------------------------------------------------
+show tables 
+create table empRdcc ( name varchar(255) , city varchar (255) , lastName varchar(255) , language varchar(255))
+insert into ccc.empRdcc VALUES('ram1' , 'patna' , 'srivastava' , 'python')
+insert into ccc.empRdcc VALUES('ram2' , 'delhi' , 'yadav' , 'java')
+insert into ccc.empRdcc VALUES('ram3' , 'patna' , 'kishor' , 'sql')
+insert into ccc.empRdcc VALUES('shyam' , 'patna' , 'srivastava' , 'python')
+
+select count(name) , city , language from ccc.empRdcc group by city , language
+select * from empRdcc
+
+create table empRdccSalary( name varchar(255) , days int , rate int ) 
+insert into ccc.empRdccSalary values ( 'ram' , 20 , 100 ,  ) 
+insert into ccc.empRdccSalary values ( 'shyam' , 30 , 100)
+insert into ccc.empRdccSalary values ( 'mohan' , 50 , 500)
+select name , days * rate as volume from ccc.empRdccSalary
+alter table ccc.empRdccSalary add city varchar(255)
+insert into ccc.empRdccSalary (city) values ('patna' )
+update ccc.empRdccSalary set city='patna' where name='ram'
+update ccc.empRdccSalary set city='patna' where name='shyam'
+update ccc.empRdccSalary set city='delhi' where name='mohan'
+select * from empRdccSalary
+delete from ccc.empRdccSalary where name is null 
+select * from empRdccSalary
+alter table ccc.empRdccSalary add technology varchar(255)
+update ccc.empRdccSalary set technology='java' where name='ram'
+update ccc.empRdccSalary set technology='python' where name='shyam'
+update ccc.empRdccSalary set technology='python' where name='mohan'
+#need to work on this addition of primary key 
+alter TABLE ccc.empRdccSalary add PRIMARY key empRdccSalary.name
+
+insert into ccc.empRdccSalary values ( 'ram' , 20 , 100 , 'patna','java' ) 
+insert into ccc.empRdccSalary values ( 'shyam' , 30 , 100 ,'delhi', 'python');
+insert into ccc.empRdccSalary values ( 'mohan' , 50 , 500 ,'delhi','python') 
+select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city 
+select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city 
+select * from ccc.empRdccSalary
+select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city
+delete from ccc.empRdccSalary where name='shyam' and city='delhi' 
+create view paymentPerCityPerTechnology as select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary group by empRdccSalary.city , technology
+select city , technology from paymentPerCityPerTechnology
+#the combination of the city and technology that got paid the highest
+select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary group by empRdccSalary.city , technology order by totalIncome desc
+50000   delhi   python
+4000    patna   java
+3000    patna   python
+#the city which took the maximum payment
+select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city order by totalIncome desc
+50000   delhi
+7000    patna
+#the technology which took the maximum payment
+select sum(days*rate) as totalIncome  , technology  from empRdccSalary group by technology order by totalIncome desc
+53000   python
+4000    java
+#the programmer which took the maximum payment
+select sum(days*rate) as totalIncome  , name   from empRdccSalary group by name  order by totalIncome desc
+50000   mohan
+4000    ram
+3000    shyam 
 
 
 
