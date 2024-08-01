@@ -330,3 +330,78 @@ reduce functions ################
 29
 
 === Code Execution Successful ===
+print("split functions ***************");
+txt = "hello,my name is Peter,I am 26 years old"
+txt = txt.replace("Peter","Gaurav");
+x = txt.split(",")
+print(x)
+print(x[0]);
+print(x[1]);
+for temp in x:
+    print(temp);
+******************************************************
+output
+******************************************************
+['apple', 'bat']
+looping the list starts *************
+list elements are : 
+apple
+list elements are : 
+bat
+{'a': 'apple', 'b': 'bat'}
+looping the map starts ***************
+key is a
+value for key is apple
+key is b
+value for key is bat
+looping the splits *************
+printing the splits
+apple
+printing the splits
+banana
+printing the splits
+cherry
+printing the splits
+orange
+file read and write operations ***********************
+execution of the python functions**************
+printing the param values : r
+printing the param values : a
+printing the param values : m
+printing the param values : s
+printing the param values : h
+printing the param values : y
+printing the param values : a
+printing the param values : m
+printing the param values : apple
+printing the param values : bat
+execution of the python LAMBDA functions**************
+5
+7
+7
+41
+411
+7111
+41
+7
+41
+execution of the MAP  functions **************
+<map object at 0x78d9caeb0220>
+[1, 1, 1]
+<map object at 0x78d9caeb0280>
+['apple#', 'banana#', 'cherry#']
+<map object at 0x78d9caeb01f0>
+['apple#', 'banana#', 'cherry#']
+<map object at 0x78d9caeb0250>
+[5, 6, 6]
+reduce functions ################
+29
+split functions ***************
+['hello', 'my name is Gaurav', 'I am 26 years old']
+hello
+my name is Gaurav
+hello
+my name is Gaurav
+I am 26 years old
+
+=== Code Execution Successful ===
