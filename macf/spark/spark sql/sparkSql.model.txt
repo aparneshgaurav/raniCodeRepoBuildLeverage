@@ -475,7 +475,18 @@ select sum(days*rate) as totalIncome  , name   from empRdccSalary group by name 
 4000    ram
 3000    shyam 
 
+--------------------------------------------------------------------
+pyspark codes on vm , vmware , pyspark , cloudera 
 
+data = [1, 2, 3, 4, 5];
+rdd1=sc.parallelize(data);
+squared_rdd = rdd1.map(lambda x: x**2);
+result = squared_rdd.collect();
+print(result); 
+-------------------------
+output 
+[1, 4, 9, 16, 25]
+------------------------------
 
 
 
