@@ -405,3 +405,23 @@ my name is Gaurav
 I am 26 years old
 
 === Code Execution Successful ===
+---------------------------------------------------------
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Try programiz.pro")
+
+varOne = "hello , hwo are you doing , do let me know";
+iterableOne = varOne.split(",");
+for x in iterableOne:
+    print("printing the conctents of the loop ")
+    print(x);
+    OUTPUT*********************
+Try programiz.pro
+printing the conctents of the loop 
+hello 
+printing the conctents of the loop 
+ hwo are you doing 
+printing the conctents of the loop 
+ do let me know
+
+=== Code Execution Successful ===
