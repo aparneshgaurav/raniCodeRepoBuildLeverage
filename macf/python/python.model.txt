@@ -425,3 +425,8 @@ printing the conctents of the loop
  do let me know
 
 === Code Execution Successful ===
+-------------------------------------------------------------
+difference between map and reduce in python functions : 
+map was doing processing on each element of the iterable very separately from the other element of that iterable . 
+like for apple , bat , cat , it returned apple# , bat# , cat# . 
+But for reduce , it did a compute involving all the elements of the iterable , which can be something like sum , min , max ( you may say like aggregate functions over all the elements in that itreable . 
