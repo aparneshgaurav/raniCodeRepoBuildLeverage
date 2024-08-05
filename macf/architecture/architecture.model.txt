@@ -218,3 +218,22 @@ c4
 so if we need column1 values for row 3 and row4 
 	in that we need to traverse microPartition2 file . 
 	this is more performant . 
+-----------------------------------------------------
+#unity 
+this labels , indexes every table , every docuemnt , attaches meta data to it . 
+so you can  find details , roles access , details of all docs and talbes .
+It's lineage . 
+Also with help of nlp and all , you can do a nautrla language search . 
+in general these metadata engnies are like : 
+	data sources 
+	kafka
+	delta lake
+	snowflake tables or graph ql engines 
+	apis which can pick data from the above graph engines or snowflake tables . 
+	also nlp indexing , searching 
+----------------------------------------------------
+grafana keeps all the important metrics that any pipelines commits . 
+logs commits . 
+and then we can visualize. 
+we can put alerts into it . 
+----------------------------------------------------
