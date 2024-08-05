@@ -149,3 +149,37 @@ Finally, initiate an action to collect the final result and print. Use the below
 output = counts.collect()
 for (word, count) in output:
     print("%s: %i" % (word, count))
+
+--------------------------------------------
+
+hbase architecture
+
+hbase master 
+region servers
+regions 
+
+hbbase masters coordinate the region servers . 
+region servers contain the regions . 
+regions loook like the jvm or the task trackers , if the region servers are the nodes . 
+
+while writing .
+we write to the region . 
+then we write to Write ahead log files , which is write buffer layer . 
+Then the buffer writes to hfile / flushes to hfile . 
+
+while writing , it reads from block cache which contains frequently retrived data . this is at a layer above the hfile . 
+
+there are two types of tables , root table and meta table . these tables are at the regionservers and contains the list of all the regions which contain the queried data . 
+
+the way data is stored in a region is that , one column family , in colum oriented fasion  is stored in one region till space of 256mb . 
+so the frequently queried columns , due to being in same column family can be found co-locally in regions . So given the set of column families that needs to be queried and if we know the range / offsets , then that data can be queried from those region / regions . 
+
+#hbase
+-----------------------------------------------
+#pyspark
+data = [1, 2, 3, 4, 5];
+rdd1=sc.parallelize(data);
+squared_rdd = rdd1.map(lambda x: x**2);
+result = squared_rdd.collect();
+print(result); 
+
