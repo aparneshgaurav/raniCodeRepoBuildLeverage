@@ -232,8 +232,17 @@ in general these metadata engnies are like :
 	apis which can pick data from the above graph engines or snowflake tables . 
 	also nlp indexing , searching 
 ----------------------------------------------------
-grafana keeps all the important metrics that any pipelines commits . 
+#grafana keeps all the important metrics that any pipelines commits . 
 logs commits . 
 and then we can visualize. 
 we can put alerts into it . 
 ----------------------------------------------------
+#deltalake 
+files are getting appended onto deltalake as atomic commits
+like 
+0001.json
+0002.json
+where each files are having incremnatal data over and atop the file that was last checkpointed . 
+Then the 0009.json for example is considered as  a checkpoint state and is added on the previous checkpoint . 
+transaction log also maintains delete logs even if the file had been removed from the delta lake . 
+opitimistic concurency control lets the users work on different parts of delta lakes and doesnt' create dirty reads / writes . Morever reads are on last checkpoints . 
