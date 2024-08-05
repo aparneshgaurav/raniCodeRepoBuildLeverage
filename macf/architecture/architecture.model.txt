@@ -246,3 +246,17 @@ where each files are having incremnatal data over and atop the file that was las
 Then the 0009.json for example is considered as  a checkpoint state and is added on the previous checkpoint . 
 transaction log also maintains delete logs even if the file had been removed from the delta lake . 
 opitimistic concurency control lets the users work on different parts of delta lakes and doesnt' create dirty reads / writes . Morever reads are on last checkpoints . 
+---------------------------------------
+#databricks
+job clusters vs compute clusters 
+	compute clusters are interactive and for teams , can be restarted . 
+	jobs clusters are for specifics apis , can't be restarted , for dedcited jobs.
+delta live tables 	
+	uses autoloaders 
+	to live ingest , do parallel copy thread based . 
+	do transformation 
+	and finally ingest the polled data from sources onto the delta lake . 
+airflow dags
+	this imports dags 
+	where the time of schedulers are written 
+	and then the job id and task ids are fed to be triggerred . 
