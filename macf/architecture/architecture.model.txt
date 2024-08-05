@@ -191,3 +191,30 @@ squared_rdd = rdd1.map(lambda x: x**2);
 result = squared_rdd.collect();
 print(result); 
 
+---------------------------------------------------
+#snowflake
+columnar
+
+   c1 c2 c3 c4 
+r1 a1
+r2 a2
+r3 a3
+r4 a4
+
+microPartition1
+   r1 r2 
+c1 a1 a2
+c2
+c3
+c4
+
+microPartition2
+   r3 r4 
+c1 a3 a4
+c2
+c3
+c4
+
+so if we need column1 values for row 3 and row4 
+	in that we need to traverse microPartition2 file . 
+	this is more performant . 
