@@ -260,3 +260,8 @@ airflow dags
 	this imports dags 
 	where the time of schedulers are written 
 	and then the job id and task ids are fed to be triggerred . 
+---------------------------------------------------------------------------
+#dataModelling #snowFlake
+https://medium.com/@shrutighoradkar101/design-data-model-for-bookmyshow-21fd56878882
+
+-------------------------------------------------------------------------
