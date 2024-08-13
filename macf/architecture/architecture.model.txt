@@ -261,8 +261,14 @@ airflow dags
 	where the time of schedulers are written 
 	and then the job id and task ids are fed to be triggerred . 
 ---------------------------------------------------------------------------
-#dataModelling #snowFlake #architectureDiagrams #diagrams
+#dataModelling #snowFlake #blogs #architectureDiagrams #diagrams
 https://medium.com/@shrutighoradkar101/design-data-model-for-bookmyshow-21fd56878882
 
 https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201120210648/Uber-System-Design-High-Level-Architecture.png
+
+// this one is a very good one on rag 
+https://prashanth08.medium.com/building-your-retrieval-augmented-generation-rag-for-custom-llms-d5f95ed5ed7a
+// this one is diagramatically well on rag
+https://www.k2view.com/blog/rag-prompt-engineering/#What-is-RAG-prompt-engineering
+Also the retreiver model is the vector index store ( reader and embedder to llama ) 
 -------------------------------------------------------------------------
