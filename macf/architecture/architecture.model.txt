@@ -271,4 +271,10 @@ https://prashanth08.medium.com/building-your-retrieval-augmented-generation-rag-
 // this one is diagramatically well on rag
 https://www.k2view.com/blog/rag-prompt-engineering/#What-is-RAG-prompt-engineering
 Also the retreiver model is the vector index store ( reader and embedder to llama ) 
+
+https://www.datacamp.com/tutorial/how-to-build-llm-applications-with-langchain
+https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/build-intelligent-rag-for-multimodality-and-complex-document/ba-p/4118184
+
+https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrJVpGJbRLSwqXZDXCPVbV?projector=1&messagePartId=0.1
+https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrRhBHSXqgCkFWThBDHKdF?projector=1&messagePartId=0.1
 -------------------------------------------------------------------------
