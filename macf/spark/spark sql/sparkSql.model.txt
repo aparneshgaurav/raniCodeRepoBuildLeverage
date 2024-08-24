@@ -338,58 +338,103 @@ COUNT(ACCOUNTID)  	CDCOUNT
 ---------------------------------------------
 
 #dbvisualizer
+
 select * from dpgUsers
+gaurav@gmail.com           1
+rani                       3
+anku                       4
+banku                      5
+
 select * from dpgTechnologies
+java        1
+spark       2
+
 delete from dpgTechnologies where technology='jquery'
 show tables 
+
 select * from factsOfdpgusersandtechnologies
+3       2
+4       1
+5       2
+5       1
 select * from dpgUsers
 delete from dpgUsers where emailid='khushi@gmail.com'
 select * from dpgUsers
+
 select * from dpgUsers where dpgUserId='1'
+gaurav@gmail.com        1
+
 create view viewOfUsersUsingTechnologies as select dpgUsers.emailid  ,  factsOfdpgusersandtechnologies.technologyid from dpgUsers inner join factsOfdpgusersandtechnologies on dpgUsers.dpguserid = factsOfdpgusersandtechnologies.dpguserid ;
 create view emailidAndTechnology as select dpgTechnologies.technology , viewOfUsersUsingTechnologies.emailid from viewOfUsersUsingTechnologies inner join dpgTechnologies on viewOfUsersUsingTechnologies.technologyid = dpgTechnologies.technologyid
+
+# so in general we query col1 from table1 and col2 from table 2 
+# when we inner join both the columns 
+# on the basis of a third id like table1.col3=table2.col3 . Also explode 
+# is very useful in cases like this . 
+# also one should have a good grasp on pre existing aggregate functions . 
+
+
 select * from dpgUsers
 select * from dpgTechnologies 
+
 select * from emailidAndTechnology
-select count(technology), emailid from emailidAndTechnology group by emailid
+spark   rani
+java    anku
+java    banku
+spark   banku
+
+
+select count(technology), emailid from emailidAndTechnology group by emailid 
+1       rani
+1       anku
+2       banku
+
+# you group by one , aggregate on other column . and then select the aggregate(otherCol) and groupedBy col 
+
 select count(technology), emailid from emailidAndTechnology group by emailid having count(technology) >1
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' ) 
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' ) 
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='spark'))
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+2        banku
+
+
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' )
+rani
+banku
+
+ 
+select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' )
+anku
+banku
+
+ 
+select emailid from dpgUsers where dpguserid 
+        in  ( select dpguserid from factsOfdpgusersandtechnologies where technologyid 
+        in  ( select technologyid from dpgTechnologies where technology='spark'))
+rani
+banku
+
+
+select emailid from dpgUsers where dpguserid
+        in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid
+        in ( select technologyid from dpgTechnologies where technology='java'))
+anku
+banku
+
+
 select emailid , RANK () over ( order by emailid desc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+banku        1
+anku         2
+
+
+
 select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+create view rankView as select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
 
 
+select * from rankView where rankid='2'
+banku        2
 
-
-------------------------------------------------------------------------------
-dbVisualizer codes back up recent . 
-select * from dpgUsers
-select * from dpgTechnologies
-delete from dpgTechnologies where technology='jquery'
-show tables 
-select * from factsOfdpgusersandtechnologies
-select * from dpgUsers
-delete from dpgUsers where emailid='khushi@gmail.com'
-select * from dpgUsers
-select * from dpgUsers where dpgUserId='1'
-create view viewOfUsersUsingTechnologies as select dpgUsers.emailid  ,  factsOfdpgusersandtechnologies.technologyid from dpgUsers inner join factsOfdpgusersandtechnologies on dpgUsers.dpguserid = factsOfdpgusersandtechnologies.dpguserid ;
-create view emailidAndTechnology as select dpgTechnologies.technology , viewOfUsersUsingTechnologies.emailid from viewOfUsersUsingTechnologies inner join dpgTechnologies on viewOfUsersUsingTechnologies.technologyid = dpgTechnologies.technologyid
-select * from dpgUsers
-select * from dpgTechnologies 
-select * from emailidAndTechnology
-select count(technology), emailid from emailidAndTechnology group by emailid
-select count(technology), emailid from emailidAndTechnology group by emailid having count(technology) >1
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' ) 
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' ) 
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='spark'))
-select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
-select emailid , RANK () over ( order by emailid desc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
-select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
 select * from ccc.factsOfdpgusersandtechnologies;
 select * from ccc.factsOfdpgusersandtechnologies;
+
 
 SELECT * from  ccc.dpgUsers
 select * from ccc.dpgTechnologies
@@ -424,19 +469,41 @@ insert into ccc.empRdcc VALUES('ram3' , 'patna' , 'kishor' , 'sql')
 insert into ccc.empRdcc VALUES('shyam' , 'patna' , 'srivastava' , 'python')
 
 select count(name) , city , language from ccc.empRdcc group by city , language
+3        patna   python
+1        delhi   java
+1        patna   sql
+
 select * from empRdcc
+ram     patna   srivastava      python
+ram1    patna   srivastava      python
+ram2    delhi   yadav   java
+ram3    patna   kishor  sql
+
 
 create table empRdccSalary( name varchar(255) , days int , rate int ) 
 insert into ccc.empRdccSalary values ( 'ram' , 20 , 100 ,  ) 
 insert into ccc.empRdccSalary values ( 'shyam' , 30 , 100)
 insert into ccc.empRdccSalary values ( 'mohan' , 50 , 500)
 select name , days * rate as volume from ccc.empRdccSalary
+ram     2000
+shyam   3000
+mohan   25000
+ram     2000
+
+
 alter table ccc.empRdccSalary add city varchar(255)
 insert into ccc.empRdccSalary (city) values ('patna' )
 update ccc.empRdccSalary set city='patna' where name='ram'
 update ccc.empRdccSalary set city='patna' where name='shyam'
 update ccc.empRdccSalary set city='delhi' where name='mohan'
+
 select * from empRdccSalary
+ram     20      100     patna   java
+shyam   30      100     patna   python
+mohan   50      500     delhi   python
+ram     20      100     patna   java
+
+
 delete from ccc.empRdccSalary where name is null 
 select * from empRdccSalary
 alter table ccc.empRdccSalary add technology varchar(255)
@@ -452,28 +519,91 @@ insert into ccc.empRdccSalary values ( 'mohan' , 50 , 500 ,'delhi','python')
 select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city 
 select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city 
 select * from ccc.empRdccSalary
+
+
 select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city
 delete from ccc.empRdccSalary where name='shyam' and city='delhi' 
 create view paymentPerCityPerTechnology as select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary group by empRdccSalary.city , technology
 select city , technology from paymentPerCityPerTechnology
+
 #the combination of the city and technology that got paid the highest
-select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary group by empRdccSalary.city , technology order by totalIncome desc
+#group by 1 or group secondary by 2 
+#aggreate on 3rd or 4th 
+#order by aggregated columns 
+select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary
+group by empRdccSalary.city , technology 
+order by totalIncome desc
 50000   delhi   python
 4000    patna   java
 3000    patna   python
+
 #the city which took the maximum payment
-select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city order by totalIncome desc
+select sum(days*rate) as totalIncome  ,  city  from empRdccSalary
+group by empRdccSalary.city
+order by totalIncome desc
 50000   delhi
 7000    patna
+
+
 #the technology which took the maximum payment
-select sum(days*rate) as totalIncome  , technology  from empRdccSalary group by technology order by totalIncome desc
+select sum(days*rate) as totalIncome  , technology  from empRdccSalary 
+group by technology 
+order by totalIncome desc
 53000   python
 4000    java
+
 #the programmer which took the maximum payment
-select sum(days*rate) as totalIncome  , name   from empRdccSalary group by name  order by totalIncome desc
-50000   mohan
-4000    ram
-3000    shyam 
+select sum(days*rate) as totalIncome  , name   , rank() over (order by sum(days*rate) desc ) as pRank
+from empRdccSalary group by name  
+50000   mohan   1
+4000    ram     2
+3000    shyam   3
+
+#the programmer which took the maximum payment
+select sum(days*rate) as totalIncome  , name   , rank() over (order by sum(days*rate) asc ) as pRank
+from empRdccSalary group by name  
+3000    shyam   1
+4000    ram     2
+50000   mohan   3
+
+create table datePoc(dates DATE);
+insert into datePoc values ( '2022-01-21')
+insert into datePoc values ( '2022-02-21')
+select * from datePoc
+
+select year(dates) from datePoc
+2022
+2022
+
+select month(dates) from datePoc
+1
+2
+
+select  date(dates) from datePoc
+alter table datePoc add column sales integer;
+update  datePoc set sales=1000 where year(dates)='2022'
+
+
+select * from datePoc
+2022-01-21      1000
+2022-02-21      1000
+
+
+# we use table keyword only in ddl , not in dml apparently 
+select sum(sales) , year(dates) from datePoc group by year(dates)
+2000        2022
+
+
+select sum(sales) as totalSales , 
+RANK () over (order by sum(sales) asc) as salesRanking  , 
+month(dates) from datePoc 
+group by month(dates)
+totalSales salesRanking month(dates)
+1000      1       1
+1000      1       2
+
+
+create table valueRanges(valuesHere integer[5])
 
 --------------------------------------------------------------------
 pyspark codes on vm , vmware , pyspark , cloudera 
