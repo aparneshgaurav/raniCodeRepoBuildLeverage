@@ -622,6 +622,9 @@ output
 [1, 4, 9, 16, 25]
 ------------------------------
 
+------------------------------------------------------
+#sql functions 
+https://www.geeksforgeeks.org/sql-functions-aggregate-scalar-functions/
 
 
 
