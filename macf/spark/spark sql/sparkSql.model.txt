@@ -419,6 +419,7 @@ anku
 banku
 
 
+# in ranking sql functiosn , good practice is to give the name of ranking as email ranking , where you have already fetched the email column while querying 
 select emailid , RANK () over ( order by emailid desc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
 banku        1
 anku         2
