@@ -278,3 +278,62 @@ https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/build-intellige
 https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrJVpGJbRLSwqXZDXCPVbV?projector=1&messagePartId=0.1
 https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrRhBHSXqgCkFWThBDHKdF?projector=1&messagePartId=0.1
 -------------------------------------------------------------------------
+
+👨‍💻 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗗𝗲𝘀𝗶𝗴𝗻 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝘀 💡 
+
+ Go: https://lnkd.in/gY828zKF
+ Java: https://lnkd.in/gvAQh5H3
+ Javascript​: https://lnkd.in/gd89jgyX
+
+𝗖𝗹𝗼𝘂𝗱 𝗗𝗲𝘀𝗶𝗴𝗻 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝘀 🌧 
+
+ ⛅ AWS cloud design patterns: https://lnkd.in/gk5-Xv9C
+
+ 🌨 Azure cloud design patterns: https://lnkd.in/gThwDH8m
+
+ 🌩 GCP cloud architecture patterns: https://lnkd.in/gGqbCsde
+
+ 🌤 Cloud Computing Patterns: https://lnkd.in/gehR6-zB
+
+
+𝗠𝗶𝗰𝗿𝗼 𝘀𝗲𝗿𝘃𝗶𝗰𝗲𝘀 & 𝗗𝗶𝘀𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝗱 𝗦𝘆𝘀𝘁𝗲𝗺𝘀 
+
+ 🎯 Microservices patterns collection: https://lnkd.in/gX-J9cvB
+
+ 🎯 Microservices Anti Patterns: https://lnkd.in/gsjj7eEm
+
+ 🎯 Patterns of Distributed Systems: https://lnkd.in/gzz2cHef
+
+ 🎯 Distributed System Patterns from AWS: https://lnkd.in/g8Ah8Q5s
+
+𝗢𝗯𝗷𝗲𝗰𝘁 𝗢𝗿𝗶𝗲𝗻𝘁𝗲𝗱 𝗗𝗲𝘀𝗶𝗴𝗻 🔮 
+
+ ✅ 𝗦𝗢𝗟𝗜𝗗 principles in pictures: https://lnkd.in/gs96iuDG
+
+ ✅ 𝗖𝗿𝗲𝗮𝘁𝗶𝗼𝗻, 𝗦𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗮𝗹, 𝗕𝗲𝗵𝗮𝘃𝗶𝗼𝘂𝗿𝗮𝗹 Design Partterns: https://lnkd.in/gHV3HCWv
+
+
+𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲𝘀 𝗮𝗻𝗱 𝗦𝘁𝗼𝗿𝗮𝗴𝗲
+
+ 📗 MongoDB Design Patterns: https://lnkd.in/gjJZ6BSW
+
+ 📙 DynamoDB Design Patterns : https://lnkd.in/g_YhsDee
+
+ 📔 Redis Design Patterns: https://lnkd.in/ghJSSQTm
+
+ 📚S3 Design Patterns: https://lnkd.in/g4DPZVep
+
+
+𝗗𝗲𝘃𝗢𝗽𝘀 & 𝗖𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿𝘀
+
+ 📦 Container Patterns: https://lnkd.in/g8YDMAGK
+
+ 🚢 Kubernetes Production Patterns: https://lnkd.in/gD-pVibE 
+
+
+𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆
+
+ 🔐 Security Architecture Patterns: https://lnkd.in/gNMrgDNN
+
+ 🔐Azure-Security: https://lnkd.in/g7rjbeXv
+
