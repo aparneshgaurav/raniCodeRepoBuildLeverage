@@ -278,6 +278,7 @@ https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/build-intellige
 https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrJVpGJbRLSwqXZDXCPVbV?projector=1&messagePartId=0.1
 https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrRhBHSXqgCkFWThBDHKdF?projector=1&messagePartId=0.1
 -------------------------------------------------------------------------
+#resources
 
 👨‍💻 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗗𝗲𝘀𝗶𝗴𝗻 𝗣𝗮𝘁𝘁𝗲𝗿𝗻𝘀 💡 
 
@@ -336,4 +337,22 @@ https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox/FMfcgzQVzFPrRhBHSXqgCkFWThBD
  🔐 Security Architecture Patterns: https://lnkd.in/gNMrgDNN
 
  🔐Azure-Security: https://lnkd.in/g7rjbeXv
-
+--------------------------------------------------------------------
+#resources 
+Data Cleaning using SQL: https://lnkd.in/g-nFBu3c
+Git Commands: https://lnkd.in/gS-Epvp7
+Dimensional Modelling: https://lnkd.in/gTZQJGtn
+ETL Concepts: https://lnkd.in/gZVAB-HH
+Databricks Features: https://lnkd.in/gwh2_RCJ
+Hadoop Q&A's: https://lnkd.in/gmTbjGU4
+Data Cleaning using PySpark: https://lnkd.in/gRaJ2wSR
+SQL Core Concepts: https://lnkd.in/gbA6uk2x
+Snowflake: https://lnkd.in/gKVEdHea
+PySpark Q&A's: https://lnkd.in/gPg8_EvK
+Data Engineering Learning Path: https://lnkd.in/gbX4uB_b
+Pandas vs PySpark vs SQL: https://lnkd.in/gt_8s9nQ
+Pandas vs SQL: https://lnkd.in/gMQZd329
+Databricks Q&A's: https://lnkd.in/g_ap3zma
+Streaming Data in Databricks: https://lnkd.in/gRFU98kR
+Airflow: https://lnkd.in/g26it-E7
+SQL Window Functions: https://lnkd.in/gKHEuc78
