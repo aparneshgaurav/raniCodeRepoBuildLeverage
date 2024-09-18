@@ -356,3 +356,36 @@ Databricks Q&A's: https://lnkd.in/g_ap3zma
 Streaming Data in Databricks: https://lnkd.in/gRFU98kR
 Airflow: https://lnkd.in/g26it-E7
 SQL Window Functions: https://lnkd.in/gKHEuc78
+---
+#sql
+1. How do you identify duplicate records in a table?
+
+2. How can you delete duplicate records from a table?
+
+3. What's the difference between UNION and UNION ALL?
+
+4. How do RANK, ROW_NUMBER, and DENSE_RANK differ?
+
+5. How do you find records in one table that don’t exist in another?
+
+6. How can you retrieve the second-highest salary for employees in each department?
+
+7. How do you find employees earning more than their manager?
+
+8. What's the difference between INNER JOIN and LEFT JOIN?
+
+9. How would you update a table to swap gender values?
+
+10. Number of records after different kinds of join?
+
+These questions, or some variation of them, are common in SQL interviews regardless of experience level! 
+1- CAP theorem
+2- Lambda vs Kappa Architecture
+3- Data vault 2.0
+4- One Big Table (OBT)
+5- Delta Lake , Data Mesh
+6- Cost Optimization techniques 
+7- Data Quality & Governance
+8- Strong Data Modeling Skills
+9- Cloud Migration & Cloud Architecture Design
+10- CI/CD Pipeline 
