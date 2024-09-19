@@ -398,6 +398,7 @@ select count(technology), emailid from emailidAndTechnology group by emailid hav
 select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='2' )
 rani
 banku
+# you have to select one column where other column is in ( select that other column in other table where some colum is equal to some value ) 
 
  
 select emailid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid='1' )
@@ -427,6 +428,7 @@ anku         2
 
 
 select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
+
 create view rankView as select emailid , RANK () over ( order by emailid asc ) as  rankid from dpgUsers where dpguserid in ( select dpguserid from factsOfdpgusersandtechnologies where technologyid in ( select technologyid from dpgTechnologies where technology='java'))
 
 
@@ -524,6 +526,7 @@ select * from ccc.empRdccSalary
 
 select sum(days*rate) as totalIncome  ,  city  from empRdccSalary group by empRdccSalary.city
 delete from ccc.empRdccSalary where name='shyam' and city='delhi' 
+
 create view paymentPerCityPerTechnology as select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary group by empRdccSalary.city , technology
 select city , technology from paymentPerCityPerTechnology
 
@@ -531,12 +534,14 @@ select city , technology from paymentPerCityPerTechnology
 #group by 1 or group secondary by 2 
 #aggreate on 3rd or 4th 
 #order by aggregated columns 
+
 select sum(days*rate) as totalIncome  ,  city , technology  from empRdccSalary
 group by empRdccSalary.city , technology 
 order by totalIncome desc
 50000   delhi   python
 4000    patna   java
 3000    patna   python
+# in case of secondary sorting  , order is done by that column on which aggreagate function was done . Total income in this case . 
 
 #the city which took the maximum payment
 select sum(days*rate) as totalIncome  ,  city  from empRdccSalary
@@ -559,6 +564,8 @@ from empRdccSalary group by name
 50000   mohan   1
 4000    ram     2
 3000    shyam   3
+#default order on aggregated column is descending . 
+#also ranking function can go only for aggregated column , not on the column on which group by was applied . 
 
 #the programmer which took the maximum payment
 select sum(days*rate) as totalIncome  , name   , rank() over (order by sum(days*rate) asc ) as pRank
@@ -602,7 +609,7 @@ group by month(dates)
 totalSales salesRanking month(dates)
 1000      1       1
 1000      1       2
-
+# in general ranking function is applied on aggregated column . 
 
 create table valueRanges(valuesHere integer[5])
 
