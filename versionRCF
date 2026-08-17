@@ -1,7 +1,7 @@
 python
 sql 
 databases
-delta lake and facts and dimensions 
+delta lake and facts and dimensions , dlf
 ai 
 aws
 
@@ -15,6 +15,36 @@ python
 	async calls 
 	methods call and callbacks 
 	fast api 
+		#####################
+				bashpip install fastapi uvicorn
+Use code with caution.Step 2: Create the Python CodeCreate a file named main.py and paste the following code. This defines the route template exactly matching your requirement: {org}/sum/{a}/{b}.pythonfrom fastapi import FastAPI
+
+# Initialize the FastAPI application
+app = FastAPI()
+
+@app.get("/{org}/sum/{a}/{b}")
+def get_sum(org: str, a: int, b: int):
+    """
+    Exposes the sum of two integers via a path parameter route.
+    Example: google/sum/5/10 -> returns 15
+    """
+    result = a + b
+    
+    return {
+        "organisation": org,
+        "input_a": a,
+        "input_b": b,
+        "total_sum": result
+    }
+Use code with caution.Step 3: Run the ServerRun the Uvicorn development server from your terminal:bashuvicorn main:app --reload
+Use code with caution.Note: main refers to your file name (main.py) and app refers to the FastAPI variable inside it.Step 4: Test Your APIOpen your browser or API client (like Postman) and navigate to:texthttp://127.0.0
+Use code with caution.Expected JSON Response:json{
+  "organisation": "mycompany",
+  "input_a": 15,
+  "input_b": 25,
+  "total_sum": 40
+}
+	##############################
 	fast api on docker and eb 
 
 sql 
