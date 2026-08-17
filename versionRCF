@@ -1,0 +1,60 @@
+python
+sql 
+databases
+delta lake and facts and dimensions 
+ai 
+aws
+
+
+send to neeti 
+every hour starts with specs wash and alarm 
+
+python 
+	all codes to it yourself and code commit 
+	funcitons 
+	async calls 
+	methods call and callbacks 
+	fast api 
+	fast api on docker and eb 
+
+sql 
+	views 
+	your personal codes on good views and joins 
+databases
+	sharding 
+	indexing 
+	columnar / row oriented 
+	scale handling 
+	moving lru to redis 
+	partitioning / bucketing 
+	how snowflake database works 
+	how nosql works 
+	which case which dataase 
+	where oltp where olap 
+dlf
+	delta lake and factsDimensions 
+	cap theoram on delta lake 
+	facts and dimensions validations 
+	learn by validation just from AIs 
+AI 
+	all specs
+	keep learning from there 
+	vector databases , knn 
+	vector embedding 
+	chunking 
+	knowledge graphs 
+	policy enforcements 
+	mcp 
+	langgraphs 
+		states 
+		mcp 
+	langsmith 
+aws
+	iam role
+	service role 
+	intermanagemnt
+	vpc
+	cross account 
+	terraform scripts 
+	policies 
+	
