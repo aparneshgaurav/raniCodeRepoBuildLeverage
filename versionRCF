@@ -130,7 +130,12 @@ WHERE total_sales > 10000;
 
 
 -------------------------------------------------------
+AI / GenAI / Ml 
 
+deep learning : cnn , rnn , bert gpt  , lstm transoformers 
+classical modelling : linear , random forest , svm clustering 
+ml framework : pytorch , xgboost 
+data and feature engineering : pandas , python , pyspark 
 
 
 
