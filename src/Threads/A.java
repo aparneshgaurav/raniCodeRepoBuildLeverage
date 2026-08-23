@@ -1,4 +1,4 @@
-package Threads;
+package Threads;  
 
 public class A implements Runnable{
 	Thread t;
